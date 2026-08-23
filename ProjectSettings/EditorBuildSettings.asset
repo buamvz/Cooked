@@ -12,6 +12,21 @@ EditorBuildSettings:
     path: Assets/Carleen/Scenes/Level 1.unity
     guid: 5e7c2bd424b8a47eebbb5792d3256f64
   - enabled: 1
+    path: Assets/Carleen/Scenes/Level 2.unity
+    guid: ba058be3233ef4b1aada6823cd331cf6
+  - enabled: 1
+    path: Assets/Carleen/Scenes/Level 3.unity
+    guid: ea8f39819a5f64c3f9f8200e55e7ca5d
+  - enabled: 1
+    path: Assets/Carleen/Scenes/Level 4.unity
+    guid: 668d213966e8c4cad9cbba54c403b928
+  - enabled: 1
+    path: Assets/Carleen/Scenes/Level 5.unity
+    guid: fec8b2e123ea04f9cbd38c7f953665bd
+  - enabled: 1
+    path: Assets/Carleen/Scenes/Level 6.unity
+    guid: 2dfb6210dc6bc4f2a83f89480acd8a2c
+  - enabled: 1
     path: Assets/Carleen/Scenes/Level Map.unity
     guid: f3e7de26ebd7f404495e479265e41126
   m_configObjects:
