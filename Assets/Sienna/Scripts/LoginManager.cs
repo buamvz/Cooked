@@ -109,7 +109,7 @@ public class LoginManager : MonoBehaviour
             // Shows how to get the playerID
             Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
 
-            PlayerSignedIn.Invoke();
+            PlayerSignedIn?.Invoke();
         }
         catch (AuthenticationException ex)
         {
