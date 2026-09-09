@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8544018febe8d4f91cbca2641b3dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataManager
+  LoginManager: {fileID: 0}
+  PlayerName: 
 --- !u!4 &244984998
 Transform:
   m_ObjectHideFlags: 0
@@ -644,6 +646,10 @@ PrefabInstance:
       value: LoginCanvas-Unity
       objectReference: {fileID: 0}
     - target: {fileID: 5021517097431041163, guid: b7a3d20fff09eab4ebc0f4ef3ca00387, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021517097431041163, guid: b7a3d20fff09eab4ebc0f4ef3ca00387, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 69930992}
@@ -659,6 +665,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: PlayGame
       objectReference: {fileID: 0}
+    - target: {fileID: 5021517097431041163, guid: b7a3d20fff09eab4ebc0f4ef3ca00387, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Level Map
+      objectReference: {fileID: 0}
     - target: {fileID: 6710479828989809981, guid: b7a3d20fff09eab4ebc0f4ef3ca00387, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -666,6 +676,14 @@ PrefabInstance:
     - target: {fileID: 6710479828989809981, guid: b7a3d20fff09eab4ebc0f4ef3ca00387, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904639938902867187, guid: b7a3d20fff09eab4ebc0f4ef3ca00387, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 7904639938902867187, guid: b7a3d20fff09eab4ebc0f4ef3ca00387, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

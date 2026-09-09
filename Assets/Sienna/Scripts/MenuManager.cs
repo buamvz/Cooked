@@ -9,10 +9,10 @@ public class MenuManager : MonoBehaviour
         sceneLoader = SceneLoader.Instance;
     }
 
-    public void PlayAsGuest()
+    public void PlayAsGuest(string sceneName)
     {
         Debug.Log("Play as guest.");
-        sceneLoader.LoadScene("Minigame");
+        sceneLoader.LoadScene(sceneName);
     }
 
     public void GoToLoginPage()
