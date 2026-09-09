@@ -1414,6 +1414,97 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &970568222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970568224}
+  - component: {fileID: 970568223}
+  m_Layer: 0
+  m_Name: Untitled_Artwork (1)_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &970568223
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970568222}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -1313353148447141868, guid: 53c7dba3353dfad43bbe51b9bcec0ee7, type: 3}
+  m_Color: {r: 0.9490196, g: 0.4564992, b: 0.4352941, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.33, y: 1.15}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &970568224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970568222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 23.968508, y: 23.968508, z: 23.968508}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1010995876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 923.61, y: -2256.99}
+  m_AnchoredPosition: {x: 923.61, y: -3184}
   m_SizeDelta: {x: 752.26, y: 558.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049750655
@@ -1809,8 +1900,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 923.61, y: -1243.99}
-  m_SizeDelta: {x: 752.26, y: 229.47}
+  m_AnchoredPosition: {x: 923.61, y: -1729.261}
+  m_SizeDelta: {x: 752.26, y: 628.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1622669405
 MonoBehaviour:
@@ -1832,23 +1923,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Portions Calories Protein Carbs Fats
-
-    1 325 15g 38g 12g
-
-    2 650
-    30g 76g 24g
-
-    3 975 45g 114g 36g
-
-    4 1300 60g 152g 48g
-
-    5 1625 75g
-    190g 60g
-
-    2
-
-'
+  m_text: "Tags: \r\n\t-Extremely rich ( heavy cream and cheese usage) \r\n\t- High
+    fat / High calories \r\nHealth Advice: \r\nCream and cheese are the biggest contributors
+    to the high calories & \r\nfat. Using light cream or evaporated milk and going
+    easy on the cheese \r\ntopping can bring fat levels down without losing the \u2018Rose\u2019
+    characteristic of this dish variant.\n\nPortions    Calories      Protein    
+    Carbs      Fats\n      1 \t        909  \t      21g   \t   26            83g\n     
+    2 \t        1818  \t      42g   \t   52g          166g\n      3          2727
+    \t      63g   \t   78g          249g\n      4          3636  \t      84g    \t  
+    104g        332g\n      5          4545  \t      105g    \t   130g        415g"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2165,3 +2248,4 @@ SceneRoots:
   - {fileID: 1524663057}
   - {fileID: 586543072}
   - {fileID: 328213254}
+  - {fileID: 970568224}

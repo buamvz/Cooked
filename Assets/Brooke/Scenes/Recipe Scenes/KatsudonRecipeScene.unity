@@ -323,8 +323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 923.61, y: -2256.99}
-  m_SizeDelta: {x: 752.26, y: 558.68}
+  m_AnchoredPosition: {x: 923.61, y: -1501.79}
+  m_SizeDelta: {x: 752.26, y: 493.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177265445
 MonoBehaviour:
@@ -346,30 +346,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Extra Information:
-
-    In this recipe, sodium tends to run high due
-    to soy sauce (up to 600
-
-    mg- 900 mg of sodium).
-
-    Culinary History:
-    Initially introduced by Hokkien-speaking Chinese
-
-    migrants and traders who
-    introduced noodles to the Philippine islands. The
-
-    dish evolved with local
-    ingredients and techniques and is a common
-
-    everyday meal. Pancit carries
-    a superstition still observed today; not to cut
-
-    the noodles as long strands
-    are believed to symbolise a long life which is
-
-    why this dish is popular
-    at Filipino birthdays.'
+  m_text: "Tags: \r\n\t-Calorie rich (an average of 520kcal per portion) \r\n\t-Fried
+    \r\nHealth Advice: \r\nSwap pork for chicken breast to reduce fat content. Using
+    less sauce \r\nand rice portions will reduce calories too\n\nPortions    Calories     
+    Protein     Carbs      Fats\n      1 \t        520  \t      28g   \t   57g         
+    18g\n      2 \t        1040  \t      56g   \t   114g         36g\n      3         
+    1560  \t      84g   \t   171g         54g\n      4          2080  \t      112g   
+    \t   228g         72g\n      5          2600  \t      140g    \t   285g        
+    90g"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -614,8 +598,8 @@ RectTransform:
   m_Children:
   - {fileID: 671536727}
   - {fileID: 1744930802}
-  - {fileID: 637183598}
   - {fileID: 177265444}
+  - {fileID: 637183598}
   m_Father: {fileID: 432628044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -817,6 +801,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432974995}
   m_CullTransparentMesh: 1
+--- !u!1 &601743094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 601743096}
+  - component: {fileID: 601743095}
+  m_Layer: 0
+  m_Name: Untitled_Artwork (1)_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &601743095
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601743094}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -1313353148447141868, guid: 53c7dba3353dfad43bbe51b9bcec0ee7, type: 3}
+  m_Color: {r: 0.09019607, g: 0.68413544, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.33, y: 1.15}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &601743096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601743094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 23.968508, y: 23.968508, z: 23.968508}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637183597
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,8 +926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 923.61, y: -1243.99}
-  m_SizeDelta: {x: 752.26, y: 229.47}
+  m_AnchoredPosition: {x: 923.61, y: -2736.291}
+  m_SizeDelta: {x: 752.26, y: 481.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637183599
 MonoBehaviour:
@@ -874,23 +949,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Portions Calories Protein Carbs Fats
-
-    1 325 15g 38g 12g
-
-    2 650
-    30g 76g 24g
-
-    3 975 45g 114g 36g
-
-    4 1300 60g 152g 48g
-
-    5 1625 75g
-    190g 60g
-
-    2
-
-'
+  m_text: "Culinary History: \r\nKatsudon, a dish that is credited to a restaurant
+    in K\u014Dfu, Yamanashi Prefecture, is a mixture of two comfort foods: tonkatsu,
+    a French dish made \r\nout of breaded deep-fried pork cutlets, introduced during
+    the Meiji Era of \r\nJapan of Western inspired mass industrialisation, and Donburi
+    a traditional \r\nrice dish topped up with a side dish. Japanese students and
+    athletes will \r\noften eat katusdon before an important exam or competition
+    as a symbol of \r\ngood luck due to \u2018katsu\u2019 being similar to the Japanese
+    word for to win! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1967,21 +2033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tags:
-
-    * High sodium
-
-    Health Advice:
-
-    Use low sodium soy
-    sauce and lean into vegetables to bulk up fibre,
-
-    alternatively you can
-    use chicken breast over pork to increase protein and
-
-    reduce fats.
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2211,3 +2263,4 @@ SceneRoots:
   - {fileID: 1022131825}
   - {fileID: 1434115246}
   - {fileID: 43027780}
+  - {fileID: 601743096}
