@@ -24,7 +24,6 @@ public class RecipeFilter : MonoBehaviour
 
     public void ApplyFilter()
     {
-        // Change toggle colours
         SetButtonColour(indonesian, indonesian.isOn);
         SetButtonColour(korean, korean.isOn);
         SetButtonColour(indian, indian.isOn);
@@ -38,13 +37,47 @@ public class RecipeFilter : MonoBehaviour
             !japanese.isOn &&
             !filipino.isOn)
         {
-            ShowRecipes(indonesianRecipes);
-            ShowRecipes(koreanRecipes);
-            ShowRecipes(indianRecipes);
-            ShowRecipes(japaneseRecipes);
-            ShowRecipes(filipinoRecipes);
+            ShowAllRecipes();
             return;
         }
+
+        HideAllRecipes();
+
+        if (indonesian.isOn)
+            ShowRecipes(indonesianRecipes);
+
+        if (korean.isOn)
+            ShowRecipes(koreanRecipes);
+
+        if (indian.isOn)
+            ShowRecipes(indianRecipes);
+
+        if (japanese.isOn)
+            ShowRecipes(japaneseRecipes);
+
+        if (filipino.isOn)
+            ShowRecipes(filipinoRecipes);
+    }
+
+    public void ClearFilters()
+    {
+        // Uncheck all filters
+        indonesian.isOn = false;
+        korean.isOn = false;
+        indian.isOn = false;
+        japanese.isOn = false;
+        filipino.isOn = false;
+
+        // Reset button colours
+        SetButtonColour(indonesian, false);
+        SetButtonColour(korean, false);
+        SetButtonColour(indian, false);
+        SetButtonColour(japanese, false);
+        SetButtonColour(filipino, false);
+
+        // Show all recipes
+        ShowAllRecipes();
+    }
 
     void SetButtonColour(Toggle button, bool selected)
     {
@@ -64,23 +97,13 @@ public class RecipeFilter : MonoBehaviour
         }
     }
 
-
-        HideAllRecipes();
-
-        if (indonesian.isOn)
-            ShowRecipes(indonesianRecipes);
-
-        if (korean.isOn)
-            ShowRecipes(koreanRecipes);
-
-        if (indian.isOn)
-            ShowRecipes(indianRecipes);
-
-        if (japanese.isOn)
-            ShowRecipes(japaneseRecipes);
-
-        if (filipino.isOn)
-            ShowRecipes(filipinoRecipes);
+    void ShowAllRecipes()
+    {
+        ShowRecipes(indonesianRecipes);
+        ShowRecipes(koreanRecipes);
+        ShowRecipes(indianRecipes);
+        ShowRecipes(japaneseRecipes);
+        ShowRecipes(filipinoRecipes);
     }
 
     void HideAllRecipes()
