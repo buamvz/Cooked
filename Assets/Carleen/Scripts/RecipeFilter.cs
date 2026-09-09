@@ -24,6 +24,13 @@ public class RecipeFilter : MonoBehaviour
 
     public void ApplyFilter()
     {
+        // Change toggle colours
+        SetButtonColour(indonesian, indonesian.isOn);
+        SetButtonColour(korean, korean.isOn);
+        SetButtonColour(indian, indian.isOn);
+        SetButtonColour(japanese, japanese.isOn);
+        SetButtonColour(filipino, filipino.isOn);
+
         // If nothing is selected, show all recipes
         if (!indonesian.isOn &&
             !korean.isOn &&
@@ -38,6 +45,25 @@ public class RecipeFilter : MonoBehaviour
             ShowRecipes(filipinoRecipes);
             return;
         }
+
+    void SetButtonColour(Toggle button, bool selected)
+    {
+        Image image = button.GetComponent<Image>();
+
+        if (selected)
+        {
+            // Selected = #25CCEE
+            Color colour;
+            ColorUtility.TryParseHtmlString("#25CCEE", out colour);
+            image.color = colour;
+        }
+        else
+        {
+            // Not selected = white
+            image.color = Color.white;
+        }
+    }
+
 
         HideAllRecipes();
 
@@ -55,26 +81,6 @@ public class RecipeFilter : MonoBehaviour
 
         if (filipino.isOn)
             ShowRecipes(filipinoRecipes);
-    }
-
-    void SetButtonColour(Image button, bool selected)
-    {
-        Color colour = button.color;
-
-        if (selected)
-        {
-            // Selected = dark and fully visible
-            colour.a = 1f;
-            button.color = colour;
-            button.transform.localScale = new Vector3(1.08f, 1.08f, 1f);
-        }
-        else
-        {
-            // Not selected = faded
-            colour.a = 0.45f;
-            button.color = colour;
-            button.transform.localScale = Vector3.one;
-        }
     }
 
     void HideAllRecipes()
