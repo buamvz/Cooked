@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Brooke/Scenes/Recipe Scenes/KatsudonRecipeScene.unity
     guid: 85a1e998e90d69445967be00817197db
   - enabled: 1
+    path: Assets/Brooke/Scenes/Recipe Scenes/SatayRecipeScene.unity
     guid: 879db31f1bf912d41a2d2cf74cb0a938
   - enabled: 1
     path: Assets/Brooke/Scenes/Recipe Scenes/TeokbokkiRecipeScene.unity
