@@ -9,6 +9,7 @@ public class LoginManager : MonoBehaviour
 {
     public Action PlayerSignedIn;
 
+    [SerializeField] private SceneLoader sceneLoader;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
@@ -21,6 +22,8 @@ public class LoginManager : MonoBehaviour
 
         Debug.Log("Returning player siging in...");
         await SignInAnonymouslyAsync();
+
+        // sceneLoader = FindAnyObjectByType<SceneLoader>();
     }
 
     private async void Awake()
@@ -38,7 +41,7 @@ public class LoginManager : MonoBehaviour
     public void PlayGame(string sceneName)
     {
         Debug.Log("Sign in and Play");
-        SceneLoader.Instance.LoadScene(sceneName);
+        sceneLoader.LoadScene(sceneName);
     }
 
     public async void StartAnonymousSignIn()
@@ -51,6 +54,7 @@ public class LoginManager : MonoBehaviour
         if (PlayerAccountService.Instance.IsSignedIn)
         {
             SignInOrLinkWithUnity();
+            PlayGame("Level Map");
             return;
         }
 
@@ -151,4 +155,31 @@ public class LoginManager : MonoBehaviour
         }
     }
 
+    public void SignOut()
+    {
+        try
+        {
+            // sign out of authentication service
+            if (AuthenticationService.Instance.IsSignedIn)
+            {
+                AuthenticationService.Instance.SignOut();
+                Debug.Log("Player signed out of Unity Authentication Service");
+            }
+            // sign out of player account service
+            if (PlayerAccountService.Instance.IsSignedIn)
+            {
+                PlayerAccountService.Instance.SignOut();
+                Debug.Log("Player signed out of Unity Player Account Service");
+            }
+
+            PlayerPrefs.DeleteKey("UnityMessaginServices.SessionToken");
+            PlayerPrefs.Save();
+
+            Debug.Log("Player signed out successfully.");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error during signout: {ex.Message}");
+        }
+    }
 }

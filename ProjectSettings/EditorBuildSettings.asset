@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sienna/Scenes/MainMenu.unity
     guid: 5cae6bb74893f4b449a2f85ed20306f9
+  - enabled: 1
+    path: Assets/Sienna/Scenes/Controls.unity
+    guid: 8b32f6cd79849874bb91176e6499506b
   - enabled: 0
     path: Assets/Sienna/Scenes/MenuAndAuthentication.unity
     guid: d12f730542ef3c2468f6b077e373a957

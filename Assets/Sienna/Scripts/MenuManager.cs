@@ -6,7 +6,8 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        sceneLoader = SceneLoader.Instance;
+        // sceneLoader = SceneLoader.Instance;
+        sceneLoader = FindAnyObjectByType<SceneLoader>();
     }
 
     public void PlayAsGuest(string sceneName)
