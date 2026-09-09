@@ -35,10 +35,10 @@ public class LoginManager : MonoBehaviour
     }
 
     // scene load to game
-    public void PlayGame()
+    public void PlayGame(string sceneName)
     {
         Debug.Log("Sign in and Play");
-        SceneLoader.Instance.LoadScene("Minigame");
+        SceneLoader.Instance.LoadScene(sceneName);
     }
 
     public async void StartAnonymousSignIn()
