@@ -3,6 +3,7 @@ using TMPro;
 
 public class FoodBurnWarning : MonoBehaviour
 {
+    public GameObject warningPanel;
     public GameObject warningIcon;
 
     public TMP_Text timerText;
@@ -19,8 +20,10 @@ public class FoodBurnWarning : MonoBehaviour
 
     void Start()
     {
+        warningPanel.SetActive(false);
         warningIcon.SetActive(false);
-        statusText.text = "Cooking...";
+
+        timerText.text = "Cooking...";
     }
 
     void Update()
@@ -31,11 +34,12 @@ public class FoodBurnWarning : MonoBehaviour
         timer += Time.deltaTime;
 
         // Show timer on screen
-        timerText.text = "Time: " + timer.ToString("F1") + "s";
+        timerText.text = "Cooking... " + timer.ToString("F1") + "s";
 
         // Show warning
         if (timer >= warningTime)
         {
+            warningPanel.SetActive(true);
             statusText.text = "WARNING! Food is almost burnt!";
 
             flashTimer += Time.deltaTime;
@@ -56,8 +60,7 @@ public class FoodBurnWarning : MonoBehaviour
 
     public void ReactToWarning()
     {
-        warningIcon.SetActive(false);
-        statusText.text = "Cooking...";
+        warningPanel.SetActive(false);
 
         timer = 0f;
         flashTimer = 0f;
@@ -67,7 +70,9 @@ public class FoodBurnWarning : MonoBehaviour
     {
         burnt = true;
 
+        warningPanel.SetActive(false);
         warningIcon.SetActive(false);
-        statusText.text = "BURNT! Food is unusable.";
+
+        timerText.text = "BURNT! Food is unusable.";
     }
 }
