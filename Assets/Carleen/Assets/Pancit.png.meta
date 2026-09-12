@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 8ebc9ea7783e448619c5dff8af2a2926
+guid: c1bf6aa6ddb784bef917366f28c5021b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3195910086468198472
-    second: Pancit draft_0
+      213: 4617751542577788967
+    second: Pancit_0
   - first:
-      213: 1179774476548405176
-    second: Pancit draft_1
+      213: -3205141240465143155
+    second: Pancit_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pancit draft_0
+      name: Pancit_0
       rect:
         serializedVersion: 2
         x: 910
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bf99f185b8d5a3d0800000000000000
-      internalID: -3195910086468198472
+      spriteID: 7287c54ef8c851040800000000000000
+      internalID: 4617751542577788967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pancit draft_1
+      name: Pancit_1
       rect:
         serializedVersion: 2
         x: 597
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b77dbdb2a66f5010800000000000000
-      internalID: 1179774476548405176
+      spriteID: d8ace1bf50d0583d0800000000000000
+      internalID: -3205141240465143155
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pancit draft_0: -3195910086468198472
-      Pancit draft_1: 1179774476548405176
+      Pancit_0: 4617751542577788967
+      Pancit_1: -3205141240465143155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
