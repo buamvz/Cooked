@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: fc147f348cf09474098ba9562f288ab4
+guid: 30774048952fe45e4ab69c81ef84242e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1331746405967960825
-    second: Sinigang draft_0
+      213: 6457201491711771242
+    second: Sinigang_0
   - first:
-      213: 5396660275727538195
-    second: Sinigang draft_1
+      213: -4683790160982565985
+    second: Sinigang_1
   - first:
-      213: 1862146728774481742
-    second: Sinigang draft_2
+      213: 1699283513402541554
+    second: Sinigang_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sinigang draft_0
+      name: Sinigang_0
       rect:
         serializedVersion: 2
         x: 594
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 705606d13bfa48de0800000000000000
-      internalID: -1331746405967960825
+      spriteID: a624a948b869c9950800000000000000
+      internalID: 6457201491711771242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sinigang draft_1
+      name: Sinigang_1
       rect:
         serializedVersion: 2
         x: 1345
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31893349de9c4ea40800000000000000
-      internalID: 5396660275727538195
+      spriteID: f9b1a241aa5dffeb0800000000000000
+      internalID: -4683790160982565985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sinigang draft_2
+      name: Sinigang_2
       rect:
         serializedVersion: 2
         x: 1398
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e473240759ca7d910800000000000000
-      internalID: 1862146728774481742
+      spriteID: 2f5490d2a51159710800000000000000
+      internalID: 1699283513402541554
       vertices: []
       indices: 
       edges: []
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sinigang draft_0: -1331746405967960825
-      Sinigang draft_1: 5396660275727538195
-      Sinigang draft_2: 1862146728774481742
+      Sinigang_0: 6457201491711771242
+      Sinigang_1: -4683790160982565985
+      Sinigang_2: 1699283513402541554
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
