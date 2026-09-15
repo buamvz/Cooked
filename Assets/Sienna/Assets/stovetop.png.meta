@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe538642012c8024083a4963d5ec2d56
+guid: e7a63c3664e79bf45ad2dcf0e19d270d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3888166963313641799
-    second: bench-background_0
+      213: 4360279611958377936
+    second: stovetop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bench-background_0
+      name: stovetop_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 736
         y: 0
-        width: 1920
+        width: 1184
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74908b3b04b85f530800000000000000
-      internalID: 3888166963313641799
+      spriteID: 0dd38209433d28c30800000000000000
+      internalID: 4360279611958377936
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bench-background_0: 3888166963313641799
+      stovetop_0: 4360279611958377936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

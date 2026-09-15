@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: fe538642012c8024083a4963d5ec2d56
+guid: e0143ac96974c92439b29b373344364d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3888166963313641799
-    second: bench-background_0
+      213: 8334651344603559088
+    second: fire_0
+  - first:
+      213: 9204931480678746970
+    second: fire_1
+  - first:
+      213: -8359625512513901107
+    second: fire_2
+  - first:
+      213: 7804807344221744696
+    second: fire_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,23 +122,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bench-background_0
+      name: fire
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 1216
+        y: 230
+        width: 639
+        height: 646
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74908b3b04b85f530800000000000000
-      internalID: 3888166963313641799
+      spriteID: 0b4b3d13d31aaa370800000000000000
+      internalID: 8334651344603559088
       vertices: []
       indices: 
       edges: []
@@ -148,7 +157,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bench-background_0: 3888166963313641799
+      fire: 8334651344603559088
+      fire_1: 9204931480678746970
+      fire_2: -8359625512513901107
+      fire_3: 7804807344221744696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
