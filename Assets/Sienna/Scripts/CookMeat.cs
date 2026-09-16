@@ -21,7 +21,8 @@ public class CookMeat : MonoBehaviour
     private bool inFryingPan;
     public bool isCooked;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private FlameOn flameOnScript;
+
     void Start()
     {
         SetInitialCookTime();
@@ -32,8 +33,11 @@ public class CookMeat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inFryingPan)
+        // if the meat is in the frying pan and the flame is turned on -> the meat can cook
+        if (inFryingPan && flameOnScript.isFlameOn)
+        {
             Cook();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

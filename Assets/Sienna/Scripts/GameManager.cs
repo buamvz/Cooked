@@ -12,16 +12,12 @@ public class GameManager : MonoBehaviour
     private bool completeLevel;
 
     [SerializeField]  private SceneLoader sceneLoader;
+    
 
     private void Start()
     {
         levelCompleteScreen.SetActive(false);
         completeLevel = false;
-    }
-
-    private void Awake()
-    {
-        
     }
 
     void Update()
@@ -32,6 +28,21 @@ public class GameManager : MonoBehaviour
         if (AllMeatCooked())
         {
             StartCoroutine(CompleteLevel());
+        }
+    }
+
+    public void HideMeat()
+    {
+        for (int i = 0; i < meatList.Length; i++)
+        {
+            meatList[i].gameObject.SetActive(false);
+        }
+    }
+    public void ShowMeat()
+    {
+        for (int i = 0; i < meatList.Length; i++)
+        {
+            meatList[i].gameObject.SetActive(true);
         }
     }
 

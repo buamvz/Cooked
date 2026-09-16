@@ -6,6 +6,11 @@ public class DragObject : MonoBehaviour
     private Vector3 mousePositionOffset;
     private bool isDragging;
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     private Vector3 GetMouseWorldPosition()
     {
         Vector2 mousePixelPoint = Pointer.current.position.ReadValue();
