@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6f28bc6e01bac4c8bd5052c5aebb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenRecipeButton
-  sceneName: BCRecipeScene
+  sceneName: PancitRecipeScene
 --- !u!114 &1203038872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,7 +1272,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BCRecipeScene
+          m_StringArgument: PancitRecipeScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1203038873

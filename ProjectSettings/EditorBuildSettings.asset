@@ -19,7 +19,13 @@ EditorBuildSettings:
     guid: 879db31f1bf912d41a2d2cf74cb0a938
   - enabled: 1
     path: Assets/Brooke/Scenes/Recipe Scenes/TeokbokkiRecipeScene.unity
+    guid: 09cb413d4f65545eaa171864b3471452
+  - enabled: 1
+    path: Assets/Brooke/Scenes/Recipe Scenes/PancitRecipeScene.unity
     guid: 0fb6089721f12d445bda2d5fb059ff37
+  - enabled: 1
+    path: Assets/Brooke/Scenes/Recipe Scenes/SinigangRecipeScene.unity
+    guid: fd72214b6658144419decb1f21c6d9c3
   - enabled: 1
     path: Assets/Brooke/Scenes/BCInteractiveMenu.unity
     guid: 56e9935e9b720bf479672b97b64d9e97
