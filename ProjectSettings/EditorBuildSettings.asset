@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Brooke/Scenes/Recipe Scenes/SatayRecipeScene.unity
     guid: 879db31f1bf912d41a2d2cf74cb0a938
   - enabled: 1
-    path: Assets/Brooke/Scenes/Recipe Scenes/TeokbokkiRecipeScene.unity
+    path: Assets/Brooke/Scenes/Recipe Scenes/TteokbokkiRecipeScene.unity
     guid: 09cb413d4f65545eaa171864b3471452
   - enabled: 1
     path: Assets/Brooke/Scenes/Recipe Scenes/PancitRecipeScene.unity
@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Brooke/Scenes/SatayInteractiveMenu.unity
     guid: b2a3618a40c768e4592d2f7ed6c89c61
   - enabled: 1
-    path: Assets/Brooke/Scenes/TeokbokkiInteractiveMenu.unity
+    path: Assets/Brooke/Scenes/TteokbokkiInteractiveMenu.unity
     guid: ac8408b6754f62248a04aee2c36a37db
   - enabled: 1
     path: Assets/Brooke/Scenes/PancitInteractiveMenu.unity
