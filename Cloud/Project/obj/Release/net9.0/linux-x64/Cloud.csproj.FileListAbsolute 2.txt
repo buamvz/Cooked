@@ -1,0 +1,13 @@
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\bin\Release\net9.0\linux-x64\Cloud.deps.json
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\bin\Release\net9.0\linux-x64\Cloud.dll
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\bin\Release\net9.0\linux-x64\Cloud.pdb
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.csproj.AssemblyReference.cache
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.AssemblyInfoInputs.cache
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.AssemblyInfo.cs
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.csproj.CoreCompileInputs.cache
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.sourcelink.json
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.dll
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\refint\Cloud.dll
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\Cloud.pdb
+C:\Users\GGPC\Documents\GitHub\Cooked\Cloud\Project\obj\Release\net9.0\linux-x64\ref\Cloud.dll
