@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 1248802770}
   - component: {fileID: 1248802769}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: LevelCompleteCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1703,7 +1703,7 @@ Transform:
   m_GameObject: {fileID: 1364693338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.46, y: -0.69, z: 0}
+  m_LocalPosition: {x: -6.41, y: -0.69, z: 0}
   m_LocalScale: {x: 0.48770764, y: 0.48770764, z: 0.48770764}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2347,13 +2347,13 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1401904280}
+  - {fileID: 1523785526}
+  - {fileID: 270827942}
+  - {fileID: 1458766971}
   - {fileID: 1364693340}
   - {fileID: 1051043195}
-  - {fileID: 270827942}
   - {fileID: 1880645746}
-  - {fileID: 1248802772}
-  - {fileID: 1523785526}
-  - {fileID: 1458766971}
-  - {fileID: 1583299227}
-  - {fileID: 687626936}
   - {fileID: 1076840764}
+  - {fileID: 687626936}
+  - {fileID: 1583299227}
+  - {fileID: 1248802772}

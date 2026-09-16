@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class FryingStepManager : MonoBehaviour
 {
-    [SerializeField] private CookMeat[] meatList;
+    [SerializeField] private List<CookMeat> meatList;
     [SerializeField] private List<MonoBehaviour> meatsList;
     [SerializeField] private GameObject levelCompleteScreen;
 
     private bool completeLevel;
 
     [SerializeField]  private SceneLoader sceneLoader;
-    
 
     private void Start()
     {
@@ -33,14 +32,14 @@ public class GameManager : MonoBehaviour
 
     public void HideMeat()
     {
-        for (int i = 0; i < meatList.Length; i++)
+        for (int i = 0; i < meatList.Count; i++)
         {
             meatList[i].gameObject.SetActive(false);
         }
     }
     public void ShowMeat()
     {
-        for (int i = 0; i < meatList.Length; i++)
+        for (int i = 0; i < meatList.Count; i++)
         {
             meatList[i].gameObject.SetActive(true);
         }
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public bool AllMeatCooked()
     {
-        for (int i = 0; i < meatList.Length; i++)
+        for (int i = 0; i < meatList.Count; i++)
         {
             if (!meatList[i].isCooked) return false;
         }

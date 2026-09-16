@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FryingPanOn : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] private FryingStepManager gameManager;
     [SerializeField] private bool isPanOnFlame;
     [SerializeField] private Transform stovePosition;
 
