@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 15991252f27c6f644aa3593cf5844d26
+guid: 559711a03895a4b45a9d978c41bdf1fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4993072337429291870
-    second: Cooked-Home_1_0
+      213: -6416265450564292382
+    second: Cooked-Home_3 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cooked-Home_1_0
+      name: Cooked-Home_3 2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 968
+        height: 526
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ac92bdd92b05bab0800000000000000
-      internalID: -4993072337429291870
+      spriteID: 2e0f08a4198d4f6a0800000000000000
+      internalID: -6416265450564292382
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cooked-Home_1_0: -4993072337429291870
+      Cooked-Home_3 2_0: -6416265450564292382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
