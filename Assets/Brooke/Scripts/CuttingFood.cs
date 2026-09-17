@@ -20,7 +20,7 @@ public class CuttingFood : MonoBehaviour
         draggingFood = GetComponent<DraggingFood>();
         mainCamera = Camera.main;
 
-        // Make sure dragging is disabled until the food is completely cut
+        // make sure dragging is disabled until the food is completely cut
         if (draggingFood != null)
         {
             draggingFood.enabled = false;
@@ -56,7 +56,7 @@ public class CuttingFood : MonoBehaviour
 
     private void TryCut(Vector2 screenPosition)
     {
-        // Convert screen position to world position
+        //convert screen position to world position for dragging
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(
             new Vector3(
                 screenPosition.x,
@@ -65,7 +65,7 @@ public class CuttingFood : MonoBehaviour
             )
         );
 
-        // Check what was clicked/tapped
+        //check what was clicked/tapped by player
         Collider2D hit = Physics2D.OverlapPoint(worldPosition);
 
         if (hit != null && hit.gameObject == gameObject)
@@ -107,6 +107,7 @@ public class CuttingFood : MonoBehaviour
         }
     }
 
+    //allows player to drag food now that it is all cut
     private void FinishedCutting()
     {
         Debug.Log(gameObject.name + " is fully cut!");
