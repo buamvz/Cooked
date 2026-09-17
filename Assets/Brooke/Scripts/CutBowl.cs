@@ -62,6 +62,5 @@ public class CutBowl : MonoBehaviour
 
         Debug.Log("Recipe complete!");
 
-        // We'll load the next scene here later.
     }
 }
