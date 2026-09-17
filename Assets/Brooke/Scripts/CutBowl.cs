@@ -24,6 +24,7 @@ public class CutBowl : MonoBehaviour
         AddFood(food.foodID);
     }
 
+    //how much of food added into bowl along with its id (so that same food can be added but also checks amount)
     private void AddFood(string foodID)
     {
         foreach (RequiredFood food in requiredFoods)
@@ -50,6 +51,7 @@ public class CutBowl : MonoBehaviour
         Debug.Log(foodID + " is not required for this recipe.");
     }
 
+    //checks if all required foods have been added to the bowl
     private void CheckRecipeComplete()
     {
         foreach (RequiredFood food in requiredFoods)
