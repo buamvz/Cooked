@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 8ebc9ea7783e448619c5dff8af2a2926
+guid: 559711a03895a4b45a9d978c41bdf1fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3195910086468198472
-    second: Pancit draft_0
-  - first:
-      213: 1179774476548405176
-    second: Pancit draft_1
+      213: -6416265450564292382
+    second: Cooked-Home_3 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pancit draft_0
+      name: Cooked-Home_3 2_0
       rect:
         serializedVersion: 2
-        x: 910
-        y: 1542
-        width: 23
-        height: 63
+        x: 0
+        y: 0
+        width: 968
+        height: 526
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bf99f185b8d5a3d0800000000000000
-      internalID: -3195910086468198472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pancit draft_1
-      rect:
-        serializedVersion: 2
-        x: 597
-        y: 334
-        width: 1101
-        height: 1152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b77dbdb2a66f5010800000000000000
-      internalID: 1179774476548405176
+      spriteID: 2e0f08a4198d4f6a0800000000000000
+      internalID: -6416265450564292382
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pancit draft_0: -3195910086468198472
-      Pancit draft_1: 1179774476548405176
+      Cooked-Home_3 2_0: -6416265450564292382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

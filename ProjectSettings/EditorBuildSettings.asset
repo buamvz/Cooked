@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Brooke/Scenes/Recipe Scenes/SatayRecipeScene.unity
     guid: 879db31f1bf912d41a2d2cf74cb0a938
   - enabled: 1
-    path: Assets/Brooke/Scenes/Recipe Scenes/TeokbokkiRecipeScene.unity
+    path: Assets/Brooke/Scenes/Recipe Scenes/TteokbokkiRecipeScene.unity
+    guid: 09cb413d4f65545eaa171864b3471452
+  - enabled: 1
+    path: Assets/Brooke/Scenes/Recipe Scenes/PancitRecipeScene.unity
     guid: 0fb6089721f12d445bda2d5fb059ff37
   - enabled: 1
     path: Assets/Brooke/Scenes/Recipe Scenes/PancitRecipeScene.unity
@@ -26,6 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Brooke/Scenes/Recipe Scenes/SinigangRecipeScene.unity
     guid: 3d4689c3e681c334f9daef40cfc2215f
+    path: Assets/Brooke/Scenes/Recipe Scenes/SinigangRecipeScene.unity
+    guid: fd72214b6658144419decb1f21c6d9c3
   - enabled: 1
     path: Assets/Brooke/Scenes/BCInteractiveMenu.unity
     guid: 56e9935e9b720bf479672b97b64d9e97
@@ -38,6 +43,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Brooke/Scenes/TeokbokkiInteractiveMenu.unity
     guid: ac8408b6754f62248a04aee2c36a37db
+  - enabled: 1
+    path: Assets/Brooke/Scenes/PancitInteractiveMenu.unity
+    guid: 80ff89a2fa09a4a7cab46848f73322a1
+  - enabled: 1
+    path: Assets/Brooke/Scenes/SinigangInteractiveMenu.unity
+    guid: 1b21206fcd19f4df39baa5870123f631
   - enabled: 1
     path: Assets/Sienna/Scenes/LoginScene.unity
     guid: 03416fd78d5cbea4f81a9309c501ec5f
