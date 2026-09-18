@@ -7,21 +7,34 @@ public class CookMeat : MonoBehaviour
     public enum MeatType
     {
         Beef,
+        Pork,
         Chicken
     }
 
-    [SerializeField] private Color rawColour;
-    [SerializeField] private Color cookedColour;
+    [SerializeField] private FlameOn flameOnScript;
+
+    // changing from colours to meat sprites
+    [SerializeField] private Sprite rawSprite;
+    [SerializeField] private Sprite cookingSprite;
+    [SerializeField] private Sprite cookedSprite;
+    [SerializeField] private Sprite burntSprite;
 
     private GameObject meat;
     private SpriteRenderer spriteRenderer;
     //[SerializeField] private Collider2D fryingPanCollider;
 
-    public float cookTimeRemaining;
+    
     private bool inFryingPan;
     public bool isCooked;
 
-    [SerializeField] private FlameOn flameOnScript;
+    private float rawTime;
+    private float cookingTime;
+    private float burntTime;
+
+    public float cookTimeRemaining;
+    public float currentCookTime;
+
+
 
     void Start()
     {
@@ -65,6 +78,8 @@ public class CookMeat : MonoBehaviour
                 return 5f;
             case MeatType.Chicken:
                 return 10f;
+            case MeatType.Pork:
+                return 7f;
             default:
                 return 0;
         }
@@ -75,18 +90,68 @@ public class CookMeat : MonoBehaviour
         cookTimeRemaining = GetInitialCookTime();
     }
 
+    public void GetTimesBasedOnMeat()
+    {
+        switch (meatType)
+        {
+            case MeatType.Beef:
+                rawTime = 3f;
+                cookingTime = 5f;
+                burntTime = 8f;
+                break;
+            case MeatType.Chicken:
+                rawTime = 5f;
+                cookingTime = 10f;
+                burntTime = 15f;
+                break;
+            case MeatType.Pork:
+                rawTime = 5f;
+                cookingTime = 7f;
+                burntTime = 10f;
+                break;
+            default:
+                rawTime = 0f;
+                cookingTime = 0f;
+                burntTime = 0f;
+                break;
+        }
+    }
+
     public void Cook()
     {
-        if (cookTimeRemaining > 0)
+        GetTimesBasedOnMeat();
+
+        if (currentCookTime > burntTime)
         {
-            cookTimeRemaining -= Time.deltaTime;
-            spriteRenderer.color = rawColour;
+            spriteRenderer.sprite = burntSprite;
+            isCooked = false;
+        }
+        else if (currentCookTime > cookingTime)
+        {
+            spriteRenderer.sprite = cookedSprite;
+            currentCookTime += Time.deltaTime;
+            isCooked = true;
+        }
+        else if (currentCookTime > rawTime)
+        {
+            spriteRenderer.sprite = cookingSprite;
+            currentCookTime += Time.deltaTime;
         }
         else
         {
-            spriteRenderer.color = cookedColour;
-            isCooked = true;
+            currentCookTime += Time.deltaTime;
         }
+
+        //if (cookTimeRemaining > 0)
+        //{
+        //    cookTimeRemaining -= Time.deltaTime;
+        //    spriteRenderer.sprite = rawSprite;
+        //}
+        //else
+        //{
+        //    spriteRenderer.sprite = cookedSprite;
+        //    isCooked = true;
+        //}
     }
 
 }

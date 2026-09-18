@@ -26,7 +26,8 @@ public class FryingStepManager : MonoBehaviour
 
         if (AllMeatCooked())
         {
-            StartCoroutine(CompleteLevel());
+            Debug.Log("All meat cooked!");
+            // StartCoroutine(CompleteLevel());
         }
     }
 

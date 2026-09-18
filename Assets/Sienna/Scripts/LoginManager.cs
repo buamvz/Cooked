@@ -30,7 +30,17 @@ public class LoginManager : MonoBehaviour
     {
         if (UnityServices.State == ServicesInitializationState.Uninitialized)
         {
-            Debug.Log("Services Initializing");
+            try
+            {
+                await UnityServices.InitializeAsync();
+
+                Debug.Log("Services Initializing");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Failed to initialize Unity Services: {ex}");
+                return;
+            }
             await UnityServices.InitializeAsync();
         }
 
@@ -38,10 +48,10 @@ public class LoginManager : MonoBehaviour
     }
 
     // scene load to game
-    public void PlayGame(string sceneName)
+    public void PlayGame()
     {
         Debug.Log("Sign in and Play");
-        sceneLoader.LoadScene(sceneName);
+        sceneLoader.LoadScene("Level Map");
     }
 
     public async void StartAnonymousSignIn()
@@ -54,7 +64,7 @@ public class LoginManager : MonoBehaviour
         if (PlayerAccountService.Instance.IsSignedIn)
         {
             SignInOrLinkWithUnity();
-            PlayGame("Level Map");
+            PlayGame();
             return;
         }
 

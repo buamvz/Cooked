@@ -17,6 +17,7 @@ public class ProfilePageManager : MonoBehaviour
     private void Awake()
     {
         inputField.SetActive(false);
+        UpdateProfileInfo();
     }
 
 
@@ -63,7 +64,16 @@ public class ProfilePageManager : MonoBehaviour
     {
         if (PlayerDataManager.Instance.playerProfile != null)
         {
-            usernameField.text = PlayerDataManager.Instance.playerProfile.playerName;
+            if (PlayerDataManager.Instance.playerProfile.playerName != null)
+            {
+
+                usernameField.text = PlayerDataManager.Instance.playerProfile.playerName;
+            }
+            else
+            {
+                usernameField.text = "NoUserName";
+            }
+
             levelsCompletedField.text = PlayerDataManager.Instance.playerProfile.completedLevels.ToString();
             totalPointsField.text = PlayerDataManager.Instance.playerProfile.totalScore.ToString();
             playerIDField.text = AuthenticationService.Instance.PlayerId;

@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Unity.Services.CloudCode;
 using Unity.Services.CloudCode.GeneratedBindings;
 using Unity.Services.CloudSave;
+using Unity.Services.Core;
+using Unity.Services.Authentication;
 using UnityEngine;
 
 public class PlayerDataManager : MonoBehaviour
@@ -31,6 +33,18 @@ public class PlayerDataManager : MonoBehaviour
         if (playerProfile == null)
         {
             Debug.LogError("Player Profile is null, cannot save.");
+            return;
+        }
+        // check that unity services is initialized/active or the data can't save
+        if (UnityServices.State != ServicesInitializationState.Initialized)
+        {
+            Debug.LogError("Unity Services not initialized, cannot save player data.");
+            return;
+        }
+        // make sure player is signed in or data cant save - cant save info when anonymous
+        if (!AuthenticationService.Instance.IsSignedIn)
+        {
+            Debug.LogError("Player is not signed in, cannot save player data.");
             return;
         }
 

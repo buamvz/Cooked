@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7107775838139121516}
   - component: {fileID: 335224841170718937}
-  - component: {fileID: 3159315305879334949}
+  - component: {fileID: 6124003413405082659}
   - component: {fileID: 524266228783976882}
   - component: {fileID: 1459243395254171169}
   - component: {fileID: 4974839236523351679}
   m_Layer: 0
-  m_Name: Chicken
+  m_Name: Pork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3811622060508080644, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
+  m_Sprite: {fileID: -7462614988661092246, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &3159315305879334949
+--- !u!61 &6124003413405082659
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,17 +129,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0052604675, y: -0.040922165}
+  m_Offset: {x: 0.0659554, y: 0.0043969154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.11, y: 1.2199999}
+    oldSize: {x: 4.37, y: 1.7299999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.881538, y: 0.9763546}
+  m_Size: {x: 3.4642105, y: 1.3518548}
   m_EdgeRadius: 0
 --- !u!50 &524266228783976882
 Rigidbody2D:
@@ -194,10 +194,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CookMeat
   meatType: 1
   flameOnScript: {fileID: 0}
-  rawSprite: {fileID: -3811622060508080644, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
-  cookingSprite: {fileID: -5254993314742274258, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
-  cookedSprite: {fileID: -2316628234867876439, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
-  burntSprite: {fileID: -8049518260444454847, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
+  rawSprite: {fileID: -7462614988661092246, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
+  cookingSprite: {fileID: -2236797942858083529, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
+  cookedSprite: {fileID: -4096694941959643791, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
+  burntSprite: {fileID: 4271457284469117706, guid: 2595ef1940feeb74398c82e4df4bff14, type: 3}
   isCooked: 0
+  rawTime: 0
+  cookingTime: 0
+  burntTime: 0
   cookTimeRemaining: 0
   currentCookTime: 0

@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
 
     public void PlayAsGuest(string sceneName)
     {
-        Debug.Log("Play as guest.");
+        Debug.Log("Play.");
         sceneLoader.LoadScene(sceneName);
     }
 
