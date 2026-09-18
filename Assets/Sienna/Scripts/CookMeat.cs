@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class CookMeat : MonoBehaviour
@@ -38,6 +39,9 @@ public class CookMeat : MonoBehaviour
 
     void Start()
     {
+        warningPanel.SetActive(false);
+        warningIcon.SetActive(false);
+
         SetInitialCookTime();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -51,6 +55,11 @@ public class CookMeat : MonoBehaviour
         {
             Cook();
         }
+        else
+        {
+            burning = false;
+        }
+        BurnWarning();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -123,22 +132,26 @@ public class CookMeat : MonoBehaviour
 
         if (currentCookTime > burntTime)
         {
+            burning = false;
             spriteRenderer.sprite = burntSprite;
             isCooked = false;
         }
         else if (currentCookTime > cookingTime)
         {
+            burning = true;
             spriteRenderer.sprite = cookedSprite;
             currentCookTime += Time.deltaTime;
             isCooked = true;
         }
         else if (currentCookTime > rawTime)
         {
+            burning = false;
             spriteRenderer.sprite = cookingSprite;
             currentCookTime += Time.deltaTime;
         }
         else
         {
+            burning = false;
             currentCookTime += Time.deltaTime;
         }
 
@@ -154,4 +167,34 @@ public class CookMeat : MonoBehaviour
         //}
     }
 
+    // burn warning from carleen
+    public GameObject warningPanel;
+    public GameObject warningIcon;
+    public TMP_Text statusText;
+
+    public bool burning;
+
+    public float flashSpeed = 0.5f;
+    private float flashTimer = 0f;
+    public void BurnWarning()
+    {
+        if (burning)
+        {
+            warningPanel.SetActive(true);
+            statusText.text = "WARNING! Food is almost burnt!";
+
+            flashTimer += Time.deltaTime;
+
+            if (flashTimer >= flashSpeed)
+            {
+                warningIcon.SetActive(!warningIcon.activeSelf);
+                flashTimer = 0f;
+            }
+        }
+        else
+        {
+            warningIcon.SetActive(false);
+            warningPanel.SetActive(false);
+        }
+    }
 }

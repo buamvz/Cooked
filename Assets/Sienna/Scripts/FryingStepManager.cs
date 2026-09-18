@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using System;
 
 public class FryingStepManager : MonoBehaviour, IStepCompleter
 {
@@ -18,7 +19,7 @@ public class FryingStepManager : MonoBehaviour, IStepCompleter
 
     private void Start()
     {
-        levelCompleteScreen.SetActive(false);
+        
         completeLevel = false;
     }
 
@@ -61,24 +62,5 @@ public class FryingStepManager : MonoBehaviour, IStepCompleter
         return true;
     }
 
-    public IEnumerator CompleteLevel()
-    {
-        Debug.Log("Level Complete!");
 
-        yield return new WaitForSeconds(1f);
-        completeLevel = true;
-
-        levelCompleteScreen.SetActive(true);
-    }
-
-    // complete level panel
-    public void GoToNextLevel()
-    {
-        Debug.Log("Go to next level... Next level does not exist.");
-        sceneLoader.LoadScene("Level Map");
-    }
-    public void ReturnToMenu()
-    {
-        sceneLoader.LoadScene("MainMenu");
-    }
 }

@@ -19,10 +19,12 @@ public class LevelStepManager : MonoBehaviour
 
     [Header("Level Complete Screen")]
     [SerializeField] private GameObject levelCompleteScreen;
+    [SerializeField] private GameObject finalDish;
 
 
     private void Awake()
     {
+        finalDish.SetActive(false);
         levelCompleteScreen.SetActive(false);
         currentStepIndex = 0;
         StartStep(currentLevel.steps[currentStepIndex]);
@@ -78,10 +80,17 @@ public class LevelStepManager : MonoBehaviour
         yield return null;
     }
 
-    private void EndOfLevel()
+    private IEnumerator CompleteLevel()
     {
         Debug.Log("Level Complete!");
+        levelCompleteScreen.SetActive(true);
+        finalDish.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
         waitForNext = false;
+
+        sceneLoader.UnloadScene(sceneToLoad);
     }
 
     // play next step when one is completed
@@ -93,18 +102,18 @@ public class LevelStepManager : MonoBehaviour
         {
             waitForNext = false;
             currentStepIndex++;
-            if (currentStepIndex <= currentLevel.steps.Count -1)
+            if (currentStepIndex < currentLevel.steps.Count)
             {
                 StartStep(currentLevel.steps[currentStepIndex]); // to start next step
             }
             else
             {
-                currentStepIndex--;
-                EndOfLevel();
+                CompleteLevel();
             }
         }
 
     }
+
 
     // === event reading for complete steps from other scripts === 
     private void HandleRecipeComplete()
@@ -131,5 +140,14 @@ public class LevelStepManager : MonoBehaviour
         PlatingFoods.OnStepComplete -= HandleRecipeComplete;
     }
 
-    // timer to points
+    // complete level panel
+    public void ReturnToLevelMap()
+    {
+        Debug.Log("Go to next level... Next level does not exist.");
+        sceneLoader.LoadScene("Level Map");
+    }
+    public void ReturnToMenu()
+    {
+        sceneLoader.LoadScene("MainMenu");
+    }
 }
