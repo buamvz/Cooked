@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Brooke/Scenes/RecipeBook.unity
+    guid: 4880b89c5ddb48144852343327ee9655
+  - enabled: 1
     path: Assets/Brooke/Scenes/Recipe Scenes/BCRecipeScene.unity
     guid: cffe3d8faa6364c4ea393afe0c48b17c
   - enabled: 1
