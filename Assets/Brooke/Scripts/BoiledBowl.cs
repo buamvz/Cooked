@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class BoiledBowl : MonoBehaviour
+public class BoiledBowl : MonoBehaviour, IStepCompleter
 {
+    public static Action OnStepComplete;
+
     [Header("Required Food")]
     [SerializeField] private List<RequiredBoiledFood> requiredFoods;
 
@@ -53,6 +56,7 @@ public class BoiledBowl : MonoBehaviour
             }
         }
 
+        OnStepComplete?.Invoke();
         Debug.Log("Boiled recipe complete!");
 
         //remeber too add the scene changer later

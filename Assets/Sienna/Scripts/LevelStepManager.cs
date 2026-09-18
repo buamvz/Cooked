@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class LevelStepManager : MonoBehaviour
 {
@@ -16,8 +17,13 @@ public class LevelStepManager : MonoBehaviour
 
     private bool waitForNext;
 
+    [Header("Level Complete Screen")]
+    [SerializeField] private GameObject levelCompleteScreen;
+
+
     private void Awake()
     {
+        levelCompleteScreen.SetActive(false);
         currentStepIndex = 0;
         StartStep(currentLevel.steps[currentStepIndex]);
     }
@@ -35,7 +41,7 @@ public class LevelStepManager : MonoBehaviour
                 // set sceneToLoad to cutting
                 break;
             case Step.Frying:
-                sceneToLoad = "Frying";
+                sceneToLoad = "FryingPan";
                 // frying
                 break;
             case Step.Boiling:
@@ -51,23 +57,24 @@ public class LevelStepManager : MonoBehaviour
         StartCoroutine(WaitForStep(step));
         // load scene
         // check if complete condition met
-        
-        step.isCompleted = true;
     }
 
     private IEnumerator WaitForStep(LevelStep step)
     {
-        sceneLoader.LoadScene(sceneToLoad);
+        sceneLoader.LoadSceneAdditive(sceneToLoad);
 
         while (!step.isCompleted)
         {
-            Debug.Log("Waiting for step to complete...");
+            // Debug.Log("Waiting for step to complete...");
             yield return null;
         }
         yield return new WaitForSeconds(1f); // delay before next step - maybe add animation later
 
         Debug.Log($"Step {step.stepType} completed!");
         waitForNext = true;
+
+        sceneLoader.UnloadScene(sceneToLoad);
+
         yield return null;
     }
 
@@ -81,11 +88,12 @@ public class LevelStepManager : MonoBehaviour
     // if all are completed, level is completed
     private void Update()
     {
+
         if (waitForNext)
         {
             waitForNext = false;
             currentStepIndex++;
-            if (currentStepIndex <= currentLevel.steps.Count)
+            if (currentStepIndex <= currentLevel.steps.Count -1)
             {
                 StartStep(currentLevel.steps[currentStepIndex]); // to start next step
             }
@@ -98,6 +106,30 @@ public class LevelStepManager : MonoBehaviour
 
     }
 
+    // === event reading for complete steps from other scripts === 
+    private void HandleRecipeComplete()
+    {
+        if (currentLevel.steps[currentStepIndex] != null)
+        {
+            currentLevel.steps[currentStepIndex].isCompleted = true;
+        }
+    }
+
+    private void OnEnable()
+    {
+        CutBowl.OnStepComplete += HandleRecipeComplete;
+        FryingStepManager.OnStepComplete += HandleRecipeComplete;
+        BoiledBowl.OnStepComplete += HandleRecipeComplete;
+        PlatingFoods.OnStepComplete += HandleRecipeComplete;
+    }
+
+    private void OnDisable()
+    {
+        CutBowl.OnStepComplete -= HandleRecipeComplete;
+        FryingStepManager.OnStepComplete -= HandleRecipeComplete;
+        BoiledBowl.OnStepComplete -= HandleRecipeComplete;
+        PlatingFoods.OnStepComplete -= HandleRecipeComplete;
+    }
 
     // timer to points
 }

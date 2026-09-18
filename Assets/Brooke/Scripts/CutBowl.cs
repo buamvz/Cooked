@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [System.Serializable]
@@ -9,13 +10,16 @@ public class RequiredFood
     [HideInInspector] public int currentAmount;
 }
 
-public class CutBowl : MonoBehaviour
+public class CutBowl : MonoBehaviour, IStepCompleter
 {
+    public static event Action OnStepComplete;
+
     [Header("Required Food")]
     [SerializeField] private List<RequiredFood> requiredFoods;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("something in bowl");
         FoodID food = other.GetComponent<FoodID>();
 
         if (food == null)
@@ -62,6 +66,7 @@ public class CutBowl : MonoBehaviour
             }
         }
 
+        OnStepComplete?.Invoke();
         Debug.Log("Recipe complete!");
 
     }

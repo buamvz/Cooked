@@ -70,7 +70,7 @@ public class CuttingFood : MonoBehaviour
 
         if (hit != null && hit.gameObject == gameObject)
         {
-            Debug.Log("Food clicked/tapped");
+            // Debug.Log("Food clicked/tapped");
 
             CutFood();
         }
@@ -83,7 +83,7 @@ public class CuttingFood : MonoBehaviour
 
         currentCuts++;
 
-        Debug.Log("Current cuts: " + currentCuts);
+        // Debug.Log("Current cuts: " + currentCuts);
 
         if (cutSprites.Length > 0)
         {
@@ -93,10 +93,10 @@ public class CuttingFood : MonoBehaviour
                 cutSprites.Length - 1
             );
 
-            Debug.Log(
-                "Changing to sprite: " +
-                cutSprites[spriteIndex].name
-            );
+       //     Debug.Log(
+       //     "Changing to sprite: " +
+       //     cutSprites[spriteIndex].name
+       //);
 
             spriteRenderer.sprite = cutSprites[spriteIndex];
         }

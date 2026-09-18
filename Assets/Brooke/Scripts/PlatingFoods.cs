@@ -1,8 +1,12 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class PlatingFoods : MonoBehaviour
+public class PlatingFoods : MonoBehaviour, IStepCompleter
 {
+    public static Action OnStepComplete;
+
     [Header("Foods to Plate")]
     [SerializeField] private List<GameObject> requiredFoods;
 
@@ -52,10 +56,10 @@ public class PlatingFoods : MonoBehaviour
             }
         }
 
-        CompletePlate();
+        StartCoroutine(CompletePlate());
     }
 
-    private void CompletePlate()
+    private IEnumerator CompletePlate()
     {
         plateComplete = true;
 
@@ -75,6 +79,9 @@ public class PlatingFoods : MonoBehaviour
         {
             spriteRenderer.sprite = finalPlateSprite;
         }
+        yield return new WaitForSeconds(2f);
+
+        OnStepComplete?.Invoke();
 
         Debug.Log("Final plated meal created!");
     }

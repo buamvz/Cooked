@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
 
-public class FryingStepManager : MonoBehaviour
+public class FryingStepManager : MonoBehaviour, IStepCompleter
 {
+    public static Action OnStepComplete;
+
     [SerializeField] private List<CookMeat> meatList;
     [SerializeField] private List<MonoBehaviour> meatsList;
-    [SerializeField] private GameObject levelCompleteScreen;
+
 
     private bool completeLevel;
 
@@ -28,6 +31,7 @@ public class FryingStepManager : MonoBehaviour
         {
             Debug.Log("All meat cooked!");
             // StartCoroutine(CompleteLevel());
+            OnStepComplete?.Invoke();
         }
     }
 
@@ -48,6 +52,8 @@ public class FryingStepManager : MonoBehaviour
 
     public bool AllMeatCooked()
     {
+        if (meatList.Count == 0) return false;
+
         for (int i = 0; i < meatList.Count; i++)
         {
             if (!meatList[i].isCooked) return false;

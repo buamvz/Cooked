@@ -1,6 +1,4 @@
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+using System;
 
 public enum Step
 {
@@ -11,12 +9,22 @@ public enum Step
 }
 
 // what a step needs
-[System.Serializable]
+[System.Serializable] // inteface instead?
 public class LevelStep
 {
     public Step stepType;
-    public Scene scene;
     public bool isCompleted;
 }
+
+public interface IStepCompleter
+{
+    static event Action OnStepComplete;
+}
+
+//public interface ILevelStep
+//{
+//    bool isCompleted { get; set; }
+//}
+
 
 //state machine to determine step info
