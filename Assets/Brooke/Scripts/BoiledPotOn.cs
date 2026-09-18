@@ -10,12 +10,14 @@ public class BoiledPotOn : MonoBehaviour
 
     [Header("Heat Stuff")]
     [SerializeField] private FlameOn flameOnScript;
+    private bool hasSnapped = false;
 
     private bool isPotOnFlame = false;
 
     private void Start()
     {
         isPotOnFlame = false;
+        hasSnapped = false;
     }
 
     private void Update()
@@ -25,13 +27,22 @@ public class BoiledPotOn : MonoBehaviour
 
     private void CheckPotPosition()
     {
-        //checking wether the pot is touching the stove
         if (potCollider.IsTouching(stoveCollider))
         {
             isPotOnFlame = true;
 
-            //snap pot to the stove
-            transform.position = stovePosition.position;
+            //only snap pot once
+            if(!hasSnapped)
+            {
+                hasSnapped = true;
+                //snap pot onto stove position
+                transform.position = stovePosition.position;
+
+
+                Debug.Log("Boiling pot snapped onto stove");
+            }
+
+            
         }
         else
         {
@@ -46,6 +57,12 @@ public class BoiledPotOn : MonoBehaviour
 
     public bool IsHeatOn()
     {
-        return isPotOnFlame && flameOnScript.isFlameOn;
+        if (!isPotOnFlame)
+            return false;
+
+        if (flameOnScript == null)
+            return false;
+
+        return flameOnScript.isFlameOn;
     }
 }

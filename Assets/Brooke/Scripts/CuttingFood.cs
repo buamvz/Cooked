@@ -70,7 +70,7 @@ public class CuttingFood : MonoBehaviour
 
         if (hit != null && hit.gameObject == gameObject)
         {
-            Debug.Log("Food clicked/tapped!");
+            Debug.Log("Food clicked/tapped");
 
             CutFood();
         }
@@ -110,7 +110,7 @@ public class CuttingFood : MonoBehaviour
     //allows player to drag food now that it is all cut
     private void FinishedCutting()
     {
-        Debug.Log(gameObject.name + " is fully cut!");
+        Debug.Log(gameObject.name + " is fully cut");
 
         if (draggingFood != null)
         {
