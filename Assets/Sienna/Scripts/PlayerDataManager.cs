@@ -7,7 +7,9 @@ using UnityEngine;
 
 public class PlayerDataManager : MonoBehaviour
 {
-    public PlayerDataManager Instance;
+    public static PlayerDataManager Instance { get; private set; }
+
+    public PlayerProfile playerProfile;
 
     private void Awake()
     {
@@ -22,14 +24,21 @@ public class PlayerDataManager : MonoBehaviour
         }
     }
 
-    // save data with unity cloud save
-    public async Task SavePlayerData(string playerName, int completedLevels, int totalScore)  // may need to adjust these according to how score and level data tracks
+    // save data with unity cloud save 
+    // updated to use player profile class
+    public async Task SavePlayerData()
     {
+        if (playerProfile == null)
+        {
+            Debug.LogError("Player Profile is null, cannot save.");
+            return;
+        }
+
         var playerData = new Dictionary<string, object>
         {
-            { "playerName", playerName },
-            { "completedLevels", completedLevels },
-            { "totalScore", totalScore }
+            { "playerName", playerProfile.playerName },
+            { "completedLevels", playerProfile.completedLevels },
+            { "totalScore", playerProfile.totalScore }
         };
 
         try
@@ -56,20 +65,25 @@ public class PlayerDataManager : MonoBehaviour
 
             var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
 
+            playerProfile = new PlayerProfile();
+
             // debug write player data for reference
             if (playerData.TryGetValue("playerName", out var name))
             {
+                playerProfile.playerName = name.Value.GetAs<string>();
                 Debug.Log($"Player Name: {name.Value.GetAs<string>()}");
             }
             if (playerData.TryGetValue("completedLevels", out var completedLevels))
             {
+                playerProfile.completedLevels = completedLevels.Value.GetAs<int>();
                 Debug.Log($"Completed Levels: {completedLevels.Value.GetAs<string>()}");
             }
             if (playerData.TryGetValue("totalScore", out var totalScore))
             {
+                playerProfile.totalScore = totalScore.Value.GetAs<int>();
                 Debug.Log($"Total Score: {totalScore.Value.GetAs<string>()}");
             }
-
+            Debug.Log($"Loaded player profile: {playerProfile.playerName}");
         }
         catch (System.Exception ex)
         {

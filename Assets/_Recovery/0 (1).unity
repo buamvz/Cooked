@@ -557,10 +557,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EditUsername
   inputField: {fileID: 1230354552}
   isEditing: 0
-  usernameField: {fileID: 1888631494}
-  levelsCompletedField: {fileID: 2059978188}
-  totalPointsField: {fileID: 196045423}
-  playerIDField: {fileID: 1932709220}
 --- !u!4 &198141491
 Transform:
   m_ObjectHideFlags: 0

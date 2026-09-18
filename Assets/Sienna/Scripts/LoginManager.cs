@@ -78,6 +78,9 @@ public class LoginManager : MonoBehaviour
                 Debug.Log("Signing up with Unity Player Account");
                 await AuthenticationService.Instance.SignInWithUnityAsync(PlayerAccountService.Instance.AccessToken);
                 Debug.Log("Successfully signed up with Unity Player Account");
+
+                await InitializePlayer();
+
                 return;
             }
             // 2. Player is authenticated, but does not yet have unity ID linked, so lets link
@@ -86,11 +89,16 @@ public class LoginManager : MonoBehaviour
                 Debug.Log("Linking anonymous account to Unity...");
                 await LinkWithUnityAsync(PlayerAccountService.Instance.AccessToken);
                 Debug.Log("Successfully linked with anonymous account!");
+
+                await InitializePlayer();
+
                 return;
             }
 
             // 3. Player has authentication and a Unity ID
             Debug.Log("Player is already signed in to their Unity Player Account");
+
+            await InitializePlayer();
         }
         catch (RequestFailedException ex)
         {
@@ -110,10 +118,10 @@ public class LoginManager : MonoBehaviour
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
             Debug.Log("Sign in anonymously succeeded!");
 
-            // Shows how to get the playerID
+            // Shows the playerID
             Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
 
-            PlayerSignedIn?.Invoke();
+            await InitializePlayer();
         }
         catch (AuthenticationException ex)
         {
@@ -182,4 +190,17 @@ public class LoginManager : MonoBehaviour
             Debug.LogError($"Error during signout: {ex.Message}");
         }
     }
+
+    // function for initializing/loading player profile data
+    private async Task InitializePlayer()
+    {
+        Debug.Log("Loading player profile data...");
+
+        // load player data
+        await PlayerDataManager.Instance.LoadPlayerData();
+        
+        Debug.Log("Player profile data loaded successfully.");
+        PlayerSignedIn?.Invoke();
+    }
+
 }
