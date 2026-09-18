@@ -89,8 +89,6 @@ public class LevelStepManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         waitForNext = false;
-
-        sceneLoader.UnloadScene(sceneToLoad);
     }
 
     // play next step when one is completed
@@ -108,7 +106,7 @@ public class LevelStepManager : MonoBehaviour
             }
             else
             {
-                CompleteLevel();
+                StartCoroutine(CompleteLevel());
             }
         }
 
