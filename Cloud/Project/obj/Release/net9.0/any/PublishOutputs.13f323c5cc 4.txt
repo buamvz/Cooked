@@ -1,0 +1,8 @@
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Cloud.dll
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Cloud.deps.json
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Cloud.pdb
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Unity.Services.CloudCode.Apis.dll
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Unity.Services.CloudCode.Core.dll
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\GGPC\AppData\Local\Temp\CookedCloud\module-compilation-cross-platform\Newtonsoft.Json.dll
