@@ -847,7 +847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -716.99994, y: -256}
+  m_AnchoredPosition: {x: -716.9999, y: -256}
   m_SizeDelta: {x: -1521.419, y: -750.9973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &887626912
@@ -919,7 +919,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   meatList:
   - {fileID: 1801462707}
-  - {fileID: 0}
   meatsList: []
   sceneLoader: {fileID: 681385473}
 --- !u!4 &951730029
@@ -1548,7 +1547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -716.99994, y: 98}
+  m_AnchoredPosition: {x: -716.9999, y: 98}
   m_SizeDelta: {x: -1521.419, y: -750.9973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732394132
