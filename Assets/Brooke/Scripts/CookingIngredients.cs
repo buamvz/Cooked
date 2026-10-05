@@ -5,7 +5,7 @@ using System.Collections;
 
 public class CookingIngredients : MonoBehaviour, IStepCompleter
 {
-    public static Action OnStepComplet;
+    public static Action OnStepComplete;
 
     [Header("Ingredients to Cook")]
     [SerializeField] private List<GameObject> requiredIngredients;
@@ -19,16 +19,22 @@ public class CookingIngredients : MonoBehaviour, IStepCompleter
     [SerializeField] private Transform stovePosition;
     [SerializeField] private Collider2D panCollider;
     [SerializeField] private Collider2D stoveCollider;
-    [SerializeField] private bool isPanOnFlame;
+    [Header("Pan Dragging")]
+    [SerializeField] private DragObject panDragObjectScript;
 
+    [SerializeField] private bool isPanOnFlame = false;
     private bool cookingComplete = false;
+    private bool isCooking = false;
 
     public void Update()
     {
-        if (cookingComplete)
-        {
-            CheckPan();
-        }
+        //check if pan is on flame
+        PanOnFlame();
+
+        if (cookingComplete || isCooking)
+            return;
+
+        CheckPan();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -50,6 +56,10 @@ public class CookingIngredients : MonoBehaviour, IStepCompleter
 
     private void CheckPan()
     {
+        if (!isPanOnFlame)
+        {
+            return;
+        }
         //check every required ingredient
         foreach (GameObject ingredient in requiredIngredients)
         {
@@ -76,11 +86,14 @@ public class CookingIngredients : MonoBehaviour, IStepCompleter
 
     private IEnumerator CompleteCooking()
     {
-        cookingComplete = true;
-        Debug.Log("all ingredients are in pan and flame is on");
+        isCooking = true;
+
+        Debug.Log("all ingredients are in the pan and the flame is on");
 
         //wait for 3 seconds to simulate cooking time
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+
+        cookingComplete = true;
 
         //hide all the ingredients
         foreach (GameObject ingredient in requiredIngredients)
@@ -104,16 +117,57 @@ public class CookingIngredients : MonoBehaviour, IStepCompleter
 
         yield return new WaitForSeconds(2f);
 
-        OnStepComplet?.Invoke();
+        OnStepComplete?.Invoke();
         Debug.Log("cooking step complete");
     }
 
     public void PanOnFlame()
     {
+        if (panCollider == null || stoveCollider == null)
+        {
+            return;
+        }
+
         if (panCollider.IsTouching(stoveCollider))
         {
-            isPanOnFlame = true;
-            gameObject.transform.position = stovePosition.position;
+            if (!isPanOnFlame)
+            {
+                isPanOnFlame = true;
+
+                Debug.Log("Pan is on the stove.");
+
+                //turn on all required ingredients so now they can be put onto pan
+                foreach (GameObject ingredient in requiredIngredients)
+                {
+                    if (ingredient != null)
+                    {
+                        ingredient.SetActive(true);
+                        Debug.Log(ingredient.name + " is now active.");
+                    }
+                }
+            }
+
+            //snaps pan to stove position - same as siennas
+            if (stovePosition != null)
+            {
+                transform.position = stovePosition.position;
+            }
+
+            //stop the pan from being dragged
+            if (panDragObjectScript != null)
+            {
+                panDragObjectScript.enabled = false;
+            }
+        }
+        else
+        {
+            isPanOnFlame = false;
+
+            //allow pan to be dragged again
+            if (panDragObjectScript != null && !cookingComplete)
+            {
+                panDragObjectScript.enabled = true;
+            }
         }
     }
 }

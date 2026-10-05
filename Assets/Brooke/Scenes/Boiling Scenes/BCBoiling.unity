@@ -2499,7 +2499,7 @@ GameObject:
   - component: {fileID: 2077390099}
   - component: {fileID: 2077390098}
   m_Layer: 0
-  m_Name: Noodles
+  m_Name: Rice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2514,8 +2514,8 @@ Transform:
   m_GameObject: {fileID: 2077390096}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2045064, y: 2.4995189, z: 0}
-  m_LocalScale: {x: 0.94014674, y: 1.0891414, z: 1.0891414}
+  m_LocalPosition: {x: -0.1929, y: 2.5053, z: 0}
+  m_LocalScale: {x: 1.5148544, y: 1.7549288, z: 1.7549288}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1499114515}
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoilFood
   boilTime: 15
-  boiledSprite: {fileID: -6484254197221676530, guid: a4a55a87702d579418e0c76cb36effec, type: 3}
+  boiledSprite: {fileID: 3025041794495140446, guid: 8bf8b388b73186e488bf29148ca87ef3, type: 3}
   draggingFood: {fileID: 2077390099}
   boilingPot: {fileID: 1499114510}
 --- !u!114 &2077390099
@@ -2622,17 +2622,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07137275, y: -0.030804634}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.28, y: 6.55}
+    oldSize: {x: 7.35, y: 2.81}
     newSize: {x: 10.28, y: 6.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.28, y: 6.55}
+  m_Size: {x: 7.567841, y: 3.4079523}
   m_EdgeRadius: 0
 --- !u!212 &2077390103
 SpriteRenderer:
@@ -2683,7 +2683,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4937803984439019196, guid: 79aec87cbc920794881192510e7007af, type: 3}
+  m_Sprite: {fileID: -8433450944392710169, guid: 8bf8b388b73186e488bf29148ca87ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
