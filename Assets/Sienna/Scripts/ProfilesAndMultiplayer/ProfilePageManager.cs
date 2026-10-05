@@ -74,8 +74,8 @@ public class ProfilePageManager : MonoBehaviour
                 usernameField.text = "NoUserName";
             }
 
-            levelsCompletedField.text = PlayerDataManager.Instance.playerProfile.completedLevels.ToString();
-            totalPointsField.text = PlayerDataManager.Instance.playerProfile.totalScore.ToString();
+            levelsCompletedField.text = PlayerDataManager.Instance.playerProfile.getCompletedLevels().ToString();
+            totalPointsField.text = PlayerDataManager.Instance.playerProfile.getTotalScore().ToString();
             playerIDField.text = AuthenticationService.Instance.PlayerId;
         }
         else

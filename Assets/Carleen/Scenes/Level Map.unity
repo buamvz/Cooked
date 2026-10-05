@@ -4590,7 +4590,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1045505130}
   m_HandleRect: {fileID: 1045505129}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.00000006157518
   m_Size: 0.49199677
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5545,7 +5545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3205141240465143155, guid: c1bf6aa6ddb784bef917366f28c5021b, type: 3}
+  m_Sprite: {fileID: -3205141240465143155, guid: 7aeeed725ec48cf4ba547cf864e7cc29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5617,6 +5617,18 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: PancitInteractiveMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 788232459}
+        m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
+        m_MethodName: SetCurrentLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1654519471

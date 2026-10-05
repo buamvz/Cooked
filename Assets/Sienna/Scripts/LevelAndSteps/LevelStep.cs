@@ -14,6 +14,7 @@ public class LevelStep
 {
     public Step stepType;
     public bool isCompleted;
+    public string sceneOfStep;
 }
 
 public interface IStepCompleter
