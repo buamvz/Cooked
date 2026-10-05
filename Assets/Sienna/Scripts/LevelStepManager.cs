@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class LevelStepManager : MonoBehaviour
 {
@@ -24,6 +25,12 @@ public class LevelStepManager : MonoBehaviour
 
     private void Awake()
     {
+        // should ensure that level is still marked complete when rebooting game
+        if(PlayerDataManager.Instance.playerProfile.getCompletedLevels() > currentLevel.levelNumber)
+        {
+            currentLevel.levelIsCompleted = true;
+        }
+
         finalDish.SetActive(false);
         levelCompleteScreen.SetActive(false);
         currentStepIndex = 0;
@@ -36,29 +43,9 @@ public class LevelStepManager : MonoBehaviour
     {
         step.isCompleted = false;
 
-        switch (step.stepType)
-        {
-            case Step.Cutting:
-                sceneToLoad = "Cutting";
-                // set sceneToLoad to cutting
-                break;
-            case Step.Frying:
-                sceneToLoad = "FryingPan";
-                // frying
-                break;
-            case Step.Boiling:
-                sceneToLoad = "Boiling";
-                // boiling
-                break;
-            case Step.Plating:
-                sceneToLoad = "Plating";
-                // plating
-                break;
-        }
+        sceneToLoad = step.sceneOfStep;
 
         StartCoroutine(WaitForStep(step));
-        // load scene
-        // check if complete condition met
     }
 
     private IEnumerator WaitForStep(LevelStep step)
@@ -141,11 +128,29 @@ public class LevelStepManager : MonoBehaviour
     // complete level panel
     public void ReturnToLevelMap()
     {
-        Debug.Log("Go to next level... Next level does not exist.");
-        sceneLoader.LoadScene("Level Map");
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+
+        if (LevelMenu.currentLevel == unlockedLevel)
+        {
+            unlockedLevel++;
+
+            PlayerPrefs.SetInt("UnlockedLevel", unlockedLevel);
+            PlayerPrefs.Save();
+
+            Debug.Log("Unlocked level: " + unlockedLevel);
+        }
+
+        if (!currentLevel.levelIsCompleted)
+        {
+            PlayerDataManager.Instance.playerProfile.addCompletedLevel();
+            currentLevel.levelIsCompleted = true;
+        }
+
+        SceneManager.LoadScene("Level Map");
     }
     public void ReturnToMenu()
     {
         sceneLoader.LoadScene("MainMenu");
     }
+
 }

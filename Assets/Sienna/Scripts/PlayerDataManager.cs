@@ -51,8 +51,8 @@ public class PlayerDataManager : MonoBehaviour
         var playerData = new Dictionary<string, object>
         {
             { "playerName", playerProfile.playerName },
-            { "completedLevels", playerProfile.completedLevels },
-            { "totalScore", playerProfile.totalScore }
+            { "completedLevels", playerProfile.getCompletedLevels() },
+            { "totalScore", playerProfile.getTotalScore() }
         };
 
         try
@@ -89,12 +89,12 @@ public class PlayerDataManager : MonoBehaviour
             }
             if (playerData.TryGetValue("completedLevels", out var completedLevels))
             {
-                playerProfile.completedLevels = completedLevels.Value.GetAs<int>();
+                playerProfile.setCompletedLevels(completedLevels.Value.GetAs<int>());
                 Debug.Log($"Completed Levels: {completedLevels.Value.GetAs<string>()}");
             }
             if (playerData.TryGetValue("totalScore", out var totalScore))
             {
-                playerProfile.totalScore = totalScore.Value.GetAs<int>();
+                playerProfile.setTotalScore(totalScore.Value.GetAs<int>());
                 Debug.Log($"Total Score: {totalScore.Value.GetAs<string>()}");
             }
             Debug.Log($"Loaded player profile: {playerProfile.playerName}");
@@ -104,6 +104,7 @@ public class PlayerDataManager : MonoBehaviour
             Debug.LogError($"Failed to load player data: {ex}");
         }
     }
+
 
     //public MyModuleBindings MyModuleBindings;
     //public LoginManager LoginManager;
