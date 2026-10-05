@@ -23,7 +23,7 @@ public class CookingIngredients : MonoBehaviour, IStepCompleter
     [SerializeField] private DragObject panDragObjectScript;
 
     [SerializeField] private bool isPanOnFlame = false;
-    private bool cookingComplete = false;
+    public bool cookingComplete = false;
     private bool isCooking = false;
 
     public void Update()

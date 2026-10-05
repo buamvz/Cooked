@@ -10,8 +10,7 @@ public class MixedIngredientsManager : MonoBehaviour, IStepCompleter
 {
     public static Action OnStepComplete;
 
-    [SerializeField] private List<CookMeat> meatList;
-    [SerializeField] private List<MonoBehaviour> meatsList;
+    [SerializeField] private List<CookingIngredients> finishedFood;
 
 
     private bool completeLevel;
@@ -29,13 +28,22 @@ public class MixedIngredientsManager : MonoBehaviour, IStepCompleter
         if (completeLevel)
             return;
 
-        //if (AllMeatCooked())
-        //{
-        //    Debug.Log("All meat cooked!");
-        //    // StartCoroutine(CompleteLevel());
-        //    OnStepComplete?.Invoke();
-        //}
+        if (AllIngredientsMixed())
+        {
+            Debug.Log("All meat cooked!");
+            // StartCoroutine(CompleteLevel());
+            OnStepComplete?.Invoke();
+        }
     }
 
+    public bool AllIngredientsMixed()
+    {
+        if (finishedFood.Count == 0) return false;
+
+        for (int i = 0; i < finishedFood.Count; i++)
+        {
+            if (!finishedFood[i].cookingComplete) return false;
+        }
+    }
 
 }

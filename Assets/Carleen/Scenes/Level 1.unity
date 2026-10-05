@@ -418,7 +418,7 @@ MonoBehaviour:
   sceneLoader: {fileID: 1470034653}
   currentLevel:
     levelName: Pancit
-    levelNumber: 0
+    levelNumber: 1
     steps:
     - stepType: 0
       isCompleted: 0
