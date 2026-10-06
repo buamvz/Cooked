@@ -17,11 +17,11 @@ public class MixedIngredientsManager : MonoBehaviour, IStepCompleter
 
     [SerializeField] private SceneLoader sceneLoader;
 
-    private void Start()
-    {
+    //private void Start()
+    //{
 
-        completeLevel = false;
-    }
+    //    completeLevel = false;
+    //}
 
     void Update()
     {
@@ -30,20 +30,31 @@ public class MixedIngredientsManager : MonoBehaviour, IStepCompleter
 
         if (AllIngredientsMixed())
         {
-            Debug.Log("All meat cooked!");
-            // StartCoroutine(CompleteLevel());
+            completeLevel = true;
+
+            Debug.Log("all ingredients have finished cooking");
+
             OnStepComplete?.Invoke();
         }
     }
 
     public bool AllIngredientsMixed()
     {
-        if (finishedFood.Count == 0) return false;
+        //don't complete if there are no cooking recipes
+        if (finishedFood.Count == 0)
+            return false;
 
+        //check every CookingIngredients object
         for (int i = 0; i < finishedFood.Count; i++)
         {
-            if (!finishedFood[i].cookingComplete) return false;
+            if (finishedFood[i] == null)
+                return false;
+
+            if (!finishedFood[i].cookingComplete)
+                return false;
         }
+
+        return true;
     }
 
 }

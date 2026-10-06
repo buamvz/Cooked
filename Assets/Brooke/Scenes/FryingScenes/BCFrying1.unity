@@ -883,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -716.9999, y: -256}
+  m_AnchoredPosition: {x: -716.99994, y: -256}
   m_SizeDelta: {x: -1521.419, y: -750.9973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &887626912
@@ -955,6 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   meatList:
   - {fileID: 1801462707}
+  - {fileID: 1945773786}
   meatsList: []
   sceneLoader: {fileID: 681385473}
 --- !u!4 &951730029
@@ -1583,7 +1584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -716.9999, y: 98}
+  m_AnchoredPosition: {x: -716.99994, y: 98}
   m_SizeDelta: {x: -1521.419, y: -750.9973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732394132
@@ -1913,6 +1914,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7107775838139121516, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
   m_PrefabInstance: {fileID: 1945773784}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1945773786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+  m_PrefabInstance: {fileID: 1945773784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d1dc30aeb0b3b4186a5437704e0cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CookMeat
 --- !u!1001 &1957780697
 PrefabInstance:
   m_ObjectHideFlags: 0

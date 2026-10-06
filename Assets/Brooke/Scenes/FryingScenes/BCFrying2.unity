@@ -1430,7 +1430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919950162}
-  - component: {fileID: 919950161}
+  - component: {fileID: 919950163}
   m_Layer: 0
   m_Name: GameManager (1)
   m_TagString: Untagged
@@ -1438,22 +1438,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919950161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919950160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c093aebdf5ac4b44b2d1ab23dbbac46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  meatList:
-  - {fileID: 0}
-  meatsList: []
-  sceneLoader: {fileID: 0}
 --- !u!4 &919950162
 Transform:
   m_ObjectHideFlags: 0
@@ -1469,6 +1453,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919950163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919950160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadf90518f56b694da3ba318bb95a7bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MixedIngredientsManager
+  finishedFood:
+  - {fileID: 2122354736}
+  sceneLoader: {fileID: 1391963355}
 --- !u!1 &1080210075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2302,7 @@ MonoBehaviour:
   stoveCollider: {fileID: 379926531}
   panDragObjectScript: {fileID: 2122354731}
   isPanOnFlame: 0
+  cookingComplete: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
