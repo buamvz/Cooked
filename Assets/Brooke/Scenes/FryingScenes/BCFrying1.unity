@@ -2051,8 +2051,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202623422425894767, guid: c050f47b45bec7a4382cb0591bb594b7, type: 3}
       propertyPath: ingredientExplanation
-      value: Turn the stove on and place the frying pan over the flame. Then place
-        the raw meat in and let it cook.burn it! (Drag off the pan)
+      value: Turn the stove on and place the frying pan over the flame. Food needs
+        to be cooked correctly otherwise you could get sick, but don't let it burn.Then
+        place the raw meat in and let it cook.burn it! (Drag off the pan)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

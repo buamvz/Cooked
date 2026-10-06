@@ -7,6 +7,7 @@ TagManager:
   - FryingPan
   - ItemToPlate
   - BoilingPot
+  - Bowl
   layers:
   - Default
   - TransparentFX
