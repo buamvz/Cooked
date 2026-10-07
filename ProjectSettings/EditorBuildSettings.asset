@@ -84,6 +84,21 @@ EditorBuildSettings:
     path: Assets/Brooke/Scenes/PlatingScenes/BCPlating.unity
     guid: 882b9edae72928443859e22b791af0b1
   - enabled: 1
+    path: Assets/Brooke/Scenes/Chopping Scenes/SatayCutting1.unity
+    guid: fcbfef6e435c06c4cbc141af08860518
+  - enabled: 1
+    path: Assets/Brooke/Scenes/Chopping Scenes/SataySkewer.unity
+    guid: a34260108247f29468740687c0a98285
+  - enabled: 1
+    path: Assets/Brooke/Scenes/FryingScenes/SatayFrying.unity
+    guid: 47d5eb2abae46314db35fcce261dca8c
+  - enabled: 1
+    path: Assets/Brooke/Scenes/Chopping Scenes/SatayCutting2.unity
+    guid: 2852a526cce4f4b48b2993778e2bd2b7
+  - enabled: 1
+    path: Assets/Brooke/Scenes/PlatingScenes/SatayPlating.unity
+    guid: e7f278287f146264fbc3386f14fbe84b
+  - enabled: 1
     path: Assets/Sienna/Scenes/LoginScene.unity
     guid: 03416fd78d5cbea4f81a9309c501ec5f
   - enabled: 1
