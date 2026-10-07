@@ -1351,8 +1351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CookingSizzle
   sizzleAudio: {fileID: 1364693345}
-  foodInPan: 1
-  stoveOn: 1
+  panCollider: {fileID: 1364693341}
+  stoveCollider: {fileID: 687626937}
+  flameOn: {fileID: 1076840765}
 --- !u!1 &1401904277
 GameObject:
   m_ObjectHideFlags: 0

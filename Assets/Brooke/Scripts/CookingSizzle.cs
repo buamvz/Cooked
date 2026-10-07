@@ -2,14 +2,42 @@ using UnityEngine;
 
 public class CookingSizzle : MonoBehaviour
 {
-    public AudioSource sizzleAudio;
+    [SerializeField] private AudioSource sizzleAudio;
 
-    public bool foodInPan = false;
-    public bool stoveOn = false;
+    [SerializeField] private Collider2D panCollider;
+    [SerializeField] private Collider2D stoveCollider;
+
+    [SerializeField] private FlameOn flameOn;
 
     void Update()
     {
-        if (foodInPan && stoveOn)
+        // Is the pan touching the stove?
+        bool panOnStove = panCollider.IsTouching(stoveCollider);
+
+        // Is the stove flame on?
+        bool stoveOn = flameOn.isFlameOn;
+
+        // Is any CookMeat food touching the pan?
+        bool foodInPan = false;
+
+        Collider2D[] objectsTouchingPan = new Collider2D[20];
+
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useTriggers = true;
+
+        int count = panCollider.Overlap(filter, objectsTouchingPan);
+
+        for (int i = 0; i < count; i++)
+        {
+            if (objectsTouchingPan[i].GetComponentInParent<CookMeat>() != null)
+            {
+                foodInPan = true;
+                break;
+            }
+        }
+
+        // Sizzle only when ALL three conditions are true
+        if (panOnStove && stoveOn && foodInPan)
         {
             if (!sizzleAudio.isPlaying)
             {
@@ -23,25 +51,5 @@ public class CookingSizzle : MonoBehaviour
                 sizzleAudio.Stop();
             }
         }
-    }
-
-    public void FoodPlacedInPan()
-    {
-        foodInPan = true;
-    }
-
-    public void FoodRemovedFromPan()
-    {
-        foodInPan = false;
-    }
-
-    public void TurnStoveOn()
-    {
-        stoveOn = true;
-    }
-
-    public void TurnStoveOff()
-    {
-        stoveOn = false;
     }
 }
