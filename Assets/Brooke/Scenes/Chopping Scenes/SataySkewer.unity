@@ -473,8 +473,6 @@ MonoBehaviour:
   chickens:
   - {fileID: 743390033}
   - {fileID: 1620384553}
-  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
-  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!114 &145263331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,8 +840,6 @@ MonoBehaviour:
   chickens:
   - {fileID: 743390033}
   - {fileID: 1620384553}
-  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
-  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!114 &194708424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,6 +1339,7 @@ GameObject:
   - component: {fileID: 743390036}
   - component: {fileID: 743390035}
   - component: {fileID: 743390034}
+  - component: {fileID: 743390041}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -1522,6 +1519,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &743390041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743390033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ec6e616f2fa54fa5f975dbf8ab507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkewerChicken
+  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
+  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!1 &800054199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,8 +1887,6 @@ MonoBehaviour:
   chickens:
   - {fileID: 743390033}
   - {fileID: 1620384553}
-  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
-  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!114 &800054207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,8 +2436,6 @@ MonoBehaviour:
   chickens:
   - {fileID: 743390033}
   - {fileID: 1620384553}
-  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
-  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!114 &1428170028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2547,6 +2554,7 @@ GameObject:
   - component: {fileID: 1620384556}
   - component: {fileID: 1620384555}
   - component: {fileID: 1620384554}
+  - component: {fileID: 1620384560}
   m_Layer: 0
   m_Name: Chicken (1)
   m_TagString: Untagged
@@ -2726,6 +2734,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1620384560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620384553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ec6e616f2fa54fa5f975dbf8ab507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkewerChicken
+  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
+  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!1 &1746049400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,8 +3102,6 @@ MonoBehaviour:
   chickens:
   - {fileID: 743390033}
   - {fileID: 1620384553}
-  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
-  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!114 &1746049408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3514,8 +3534,6 @@ MonoBehaviour:
   chickens:
   - {fileID: 743390033}
   - {fileID: 1620384553}
-  chickenLessSprite: {fileID: 4979735122701714205, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
-  chickenLessLessSprite: {fileID: -5212105263687333457, guid: 105bae8d34236be4f8e5fcc7397bfa05, type: 3}
 --- !u!114 &2140513863
 MonoBehaviour:
   m_ObjectHideFlags: 0

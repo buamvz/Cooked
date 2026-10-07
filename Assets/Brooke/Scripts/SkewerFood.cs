@@ -12,29 +12,18 @@ public class SkewerFood : MonoBehaviour
 
     [Header("Chickens")]
     [SerializeField] private List<GameObject> chickens;
-    [SerializeField] private Sprite chickenLessSprite;
-    [SerializeField] private Sprite chickenLessLessSprite;
+    //[SerializeField] private Sprite chickenLessSprite;
+    //[SerializeField] private Sprite chickenLessLessSprite;
 
     private bool hasPickedUpChicken = false;
     private bool hasBeenPlacedInBowl = false;
 
-    //keeps track of how many times each chicken has been picked up so for different sprite changes
-    private Dictionary<GameObject, int> chickenPickupCounts =
-        new Dictionary<GameObject, int>();
+    //moved counting each hit on chicken to skewerchicken script
     private void Start()
     {
         if (skewerSpriteRenderer == null)
         {
             skewerSpriteRenderer = GetComponent<SpriteRenderer>();
-        }
-
-        //starts every chicken at 0 pickups from skewer
-        foreach (GameObject chicken in chickens)
-        {
-            if (chicken != null)
-            {
-                chickenPickupCounts[chicken] = 0;
-            }
         }
 
     }
@@ -78,86 +67,30 @@ public class SkewerFood : MonoBehaviour
     {
         hasPickedUpChicken = true;
 
-        Debug.Log("skewer picked up: " + chicken.name);
+        Debug.Log("skewer picked up chicken from " + chicken.name);
 
-        //change the skewer to the version with chicken
+        //changes skewer sprite
         if (skewerSpriteRenderer != null && chickenSkewerSprite != null)
         {
             skewerSpriteRenderer.sprite = chickenSkewerSprite;
-            Debug.Log("skewer sprite changed to chicken skewer");
+
+            Debug.Log("skewer changed to chicken skewer");
         }
 
-        //makeing this chicken has a pickup count.
-        if (!chickenPickupCounts.ContainsKey(chicken))
+        //tells  chicken that it has been picked up
+        SkewerChicken skewerChicken = chicken.GetComponent<SkewerChicken>();
+
+        if (skewerChicken != null)
         {
-            chickenPickupCounts[chicken] = 0;
+            skewerChicken.PickUpChicken();
         }
-
-        //increase this specific chicken's pickup count so it stays individual
-        chickenPickupCounts[chicken]++;
-
-        int pickupCount = chickenPickupCounts[chicken];
-
-        Debug.Log(chicken.name + " has been picked up " + pickupCount +" times");
-        ChangeChickenSprite(chicken, pickupCount);
+        else
+        {
+            Debug.LogWarning(chicken.name + " missing skewerChicken component");
+        }
 
     }
 
-    private void ChangeChickenSprite(GameObject chicken, int pickupCount)
-    {
-        SpriteRenderer chickenRenderer =
-            chicken.GetComponent<SpriteRenderer>();
-
-        if (chickenRenderer == null)
-        {
-            Debug.LogWarning(chicken.name + " does not have a spriteRenderer");
-
-            return;
-        }
-
-        //first
-        if (pickupCount == 1)
-        {
-            if (chickenLessSprite != null)
-            {
-                chickenRenderer.sprite = chickenLessSprite;
-
-                Debug.Log(chicken.name + " changed to less chicken");
-            }
-            else
-            {
-                Debug.LogWarning("chicken Less Sprite has not been assigned");
-            }
-        }
-
-        //second
-        else if (pickupCount == 2)
-        {
-            if (chickenLessLessSprite != null)
-            {
-                chickenRenderer.sprite = chickenLessLessSprite;
-
-                Debug.Log(
-                    chicken.name +
-                    " changed to less less chicken."
-                );
-            }
-            else
-            {
-                Debug.LogWarning(
-                    "Chicken Less Less Sprite has not been assigned."
-                );
-            }
-        }
-
-        //third
-        else if (pickupCount >= 3)
-        {
-            chicken.SetActive(false);
-
-            Debug.Log(chicken.name + " has been fully taken and disappeared");
-        }
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
