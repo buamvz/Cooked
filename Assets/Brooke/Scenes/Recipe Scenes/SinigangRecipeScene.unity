@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 396173161}
   - component: {fileID: 396173160}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Recipe Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 957377608}
   - component: {fileID: 957377607}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Recipe Tag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
