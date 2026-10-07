@@ -23,7 +23,7 @@ public class CookingIngredients : MonoBehaviour, IStepCompleter
     [SerializeField] private DragObject panDragObjectScript;
 
     [SerializeField] private bool isPanOnFlame = false;
-    private bool cookingComplete = false;
+    public bool cookingComplete = false;
     private bool isCooking = false;
 
     public void Update()
@@ -115,10 +115,10 @@ public class CookingIngredients : MonoBehaviour, IStepCompleter
             Debug.Log("mixed ingredients object is missing");
         }
 
-        yield return new WaitForSeconds(2f);
+        //yield return new WaitForSeconds(2f);
 
-        OnStepComplete?.Invoke();
-        Debug.Log("cooking step complete");
+        //OnStepComplete?.Invoke();
+        //Debug.Log("cooking step complete");
     }
 
     public void PanOnFlame()
