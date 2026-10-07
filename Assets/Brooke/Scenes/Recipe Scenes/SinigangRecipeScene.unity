@@ -328,7 +328,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1218457858}
   m_Direction: 3
   m_Value: 1
-  m_Size: 0.15070264
+  m_Size: 0.18665422
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -614,7 +614,6 @@ RectTransform:
   m_Children:
   - {fileID: 233920785}
   - {fileID: 1775221298}
-  - {fileID: 1733318827}
   m_Father: {fileID: 1167943642}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1399,8 +1398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 916, y: -3855}
-  m_SizeDelta: {x: 752.26, y: 1942.34}
+  m_AnchoredPosition: {x: 902, y: -2389}
+  m_SizeDelta: {x: 752.26, y: 252.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957377607
 MonoBehaviour:
@@ -2165,9 +2164,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Tags: \r\n - Rich in Vit-C & Fibre\n - Variable fat (cut dependant) \n\r\nHealth
     Advice: \r\nUse a leaner cut of meat to reduce calories. Shoulder or loin cuts
-    keep \r\nthe flavour & reduce calories\n\nExtra Information: \r\nThis recipe
-    is rich in Vitamin C and fibre due to the vegetable load \r\n(kangkong, radish,
-    okra, tomato). Fat content depends on meat cut."
+    keep \r\nthe flavour & reduce calories\n\nPortions | Calories | Protein | Carbs
+    | Fats\n      1 \t  310         16g        21g      9g\n      2 \t  620        
+    33g        43g      18g\n      4          1240       66g        86g      36g\n     
+    6          1550       82g        107g     67g\n\nExtra Information: \r\nThis
+    recipe is rich in Vitamin C and fibre due to the vegetable load \r\n(kangkong,
+    radish, okra, tomato). Fat content depends on meat cut."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2281,11 +2283,11 @@ RectTransform:
   - {fileID: 749263347}
   - {fileID: 1838528413}
   - {fileID: 2115897164}
-  m_Father: {fileID: 435909806}
+  m_Father: {fileID: 1775221298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 670.75995, y: 347.6094}
+  m_AnchoredPosition: {x: 733, y: 2727}
   m_SizeDelta: {x: 307.93, y: 82.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733318828
@@ -2426,12 +2428,13 @@ RectTransform:
   - {fileID: 1732821186}
   - {fileID: 2105686101}
   - {fileID: 1950981674}
+  - {fileID: 1733318827}
   m_Father: {fileID: 435909806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40.79, y: -3043.215}
-  m_SizeDelta: {x: 1838.42, y: 7166.43}
+  m_AnchoredPosition: {x: -40.79, y: -2353.05}
+  m_SizeDelta: {x: 1838.42, y: 5786.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1838528412
 GameObject:
@@ -2580,7 +2583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -799, y: 3464}
+  m_AnchoredPosition: {x: -786, y: 2780}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950981675
@@ -2952,7 +2955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 925, y: -3882}
+  m_AnchoredPosition: {x: 911, y: -4100}
   m_SizeDelta: {x: 752.26, y: 587.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105686102
