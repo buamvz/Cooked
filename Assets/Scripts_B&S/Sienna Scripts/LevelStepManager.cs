@@ -18,9 +18,6 @@ public class LevelStepManager : MonoBehaviour
 
     private bool waitForNext;
 
-    // stepcompleters
-    private List<IStepCompleter> stepCompleters = new List<IStepCompleter>();
-
     [Header("Level Complete Screen")]
     [SerializeField] private GameObject levelCompleteScreen;
     [SerializeField] private GameObject finalDish;
@@ -38,15 +35,6 @@ public class LevelStepManager : MonoBehaviour
         levelCompleteScreen.SetActive(false);
         currentStepIndex = 0;
         StartStep(currentLevel.steps[currentStepIndex]);
-
-        MonoBehaviour[] allMonoBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
-        foreach (MonoBehaviour mono in allMonoBehaviours)
-        {
-            if (mono is IStepCompleter)
-            {
-                stepCompleters.Add((IStepCompleter)mono);
-            }
-        }
     }
 
 
@@ -123,10 +111,6 @@ public class LevelStepManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //foreach (IStepCompleter stepCompleter in stepCompleters)
-        //{
-        //    if(stepCompleter != null) stepCompleter.OnStepComplete += HandleRecipeComplete;
-        //}
         CutBowl.OnStepComplete += HandleRecipeComplete;
         FryingStepManager.OnStepComplete += HandleRecipeComplete;
         BoiledBowl.OnStepComplete += HandleRecipeComplete;
@@ -135,10 +119,6 @@ public class LevelStepManager : MonoBehaviour
 
     private void OnDisable()
     {
-        //foreach (IStepCompleter stepCompleter in stepCompleters)
-        //{
-        //    if (stepCompleter != null) stepCompleter.OnStepComplete -= HandleRecipeComplete;
-        //}
         CutBowl.OnStepComplete -= HandleRecipeComplete;
         FryingStepManager.OnStepComplete -= HandleRecipeComplete;
         BoiledBowl.OnStepComplete -= HandleRecipeComplete;
