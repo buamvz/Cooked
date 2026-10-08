@@ -115,6 +115,7 @@ public class LevelStepManager : MonoBehaviour
         FryingStepManager.OnStepComplete += HandleRecipeComplete;
         BoiledBowl.OnStepComplete += HandleRecipeComplete;
         PlatingFoods.OnStepComplete += HandleRecipeComplete;
+        MixedIngredientsManager.OnStepComplete += HandleRecipeComplete; //Brooke added
     }
 
     private void OnDisable()
@@ -123,6 +124,7 @@ public class LevelStepManager : MonoBehaviour
         FryingStepManager.OnStepComplete -= HandleRecipeComplete;
         BoiledBowl.OnStepComplete -= HandleRecipeComplete;
         PlatingFoods.OnStepComplete -= HandleRecipeComplete;
+        MixedIngredientsManager.OnStepComplete -= HandleRecipeComplete; //Brooke added
     }
 
     // complete level panel
