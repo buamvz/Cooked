@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class FryingStepManager : MonoBehaviour, IStepCompleter
 {
-    public static Action OnStepComplete;
+    public static event Action OnStepComplete;
 
     [SerializeField] private List<CookMeat> meatList;
     [SerializeField] private List<MonoBehaviour> meatsList;

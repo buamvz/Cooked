@@ -3,6 +3,7 @@ using TMPro;
 using Unity.Services.Authentication;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ProfilePageManager : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class ProfilePageManager : MonoBehaviour
         {
             if (Keyboard.current != null && Keyboard.current.enterKey.wasPressedThisFrame)
             {
+                inputField.SetActive(false);
                 SaveUsernameToProfile();
                 yield break;
             }
