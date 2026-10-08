@@ -9,8 +9,10 @@ using UnityEngine.SceneManagement;
 public class LevelStepManager : MonoBehaviour
 {
     [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private ProgressBarController progressBar;
+
     // store and give values of level and its steps
-    
+
     public Level currentLevel;
 
     private string sceneToLoad;
@@ -26,15 +28,20 @@ public class LevelStepManager : MonoBehaviour
     private void Awake()
     {
         // should ensure that level is still marked complete when rebooting game
-        if(PlayerDataManager.Instance.playerProfile.getCompletedLevels() > currentLevel.levelNumber)
+        if (PlayerDataManager.Instance != null)
         {
-            currentLevel.levelIsCompleted = true;
+            if (PlayerDataManager.Instance.playerProfile.getCompletedLevels() > currentLevel.levelNumber)
+            {
+                currentLevel.levelIsCompleted = true;
+            }
         }
 
         finalDish.SetActive(false);
         levelCompleteScreen.SetActive(false);
         currentStepIndex = 0;
         StartStep(currentLevel.steps[currentStepIndex]);
+
+        progressBar.SetProgressValues(0f, currentLevel.steps.Count);
     }
 
 
@@ -62,7 +69,9 @@ public class LevelStepManager : MonoBehaviour
         Debug.Log($"Step {step.stepType} completed!");
         waitForNext = true;
 
+        progressBar.ProgressIncrease();
         sceneLoader.UnloadScene(sceneToLoad);
+
 
         yield return null;
     }
@@ -154,5 +163,4 @@ public class LevelStepManager : MonoBehaviour
     {
         sceneLoader.LoadScene("MainMenu");
     }
-
 }

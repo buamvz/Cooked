@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ProgressBarController : MonoBehaviour
 {
+
     [SerializeField] private Slider progressBar;
     [SerializeField] private float fillAmountPerClick = 0.1f;
     [SerializeField] private float fillSpeed = 2f;
@@ -18,10 +19,19 @@ public class ProgressBarController : MonoBehaviour
     private bool hasCompleted = false;
     private float startTime;
 
-    private void Start()
+    //private void Start()
+    //{
+    //    progressBar.value = 0f;
+    //    targetValue = 0f;
+    //}
+
+    public void SetProgressValues(float givenTargetValue, int numberOfSteps)
     {
         progressBar.value = 0f;
-        targetValue = 0f;
+        targetValue = givenTargetValue;
+
+        float amountToFill = 1f / numberOfSteps;
+        fillAmountPerClick = amountToFill;
     }
 
     private void Update()
@@ -62,7 +72,7 @@ public class ProgressBarController : MonoBehaviour
         }
     }
 
-    public void OnButtonPressed()
+    public void ProgressIncrease()
     {
         if (!hasStartedTiming)
         {
