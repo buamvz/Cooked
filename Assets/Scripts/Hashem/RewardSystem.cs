@@ -40,6 +40,8 @@ public class RewardSystem : MonoBehaviour
             starContainer.alpha = 1f;
         }
 
+        PlayerDataManager.Instance.playerProfile.addScore(starCount);
+        
         return starCount;
     }
 
