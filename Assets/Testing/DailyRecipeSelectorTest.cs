@@ -42,11 +42,23 @@ public class DailyRecipeSelectorTests
             "Katsudon"
         };
 
+        // Identify the recipe that is locked.
+        List<string> lockedRecipes = new List<string>
+        {
+            "Butter Chicken"
+        };
+
         //select a recipe using the unlocked recipes
         string selectedRecipe = DailyRecipeSelector.SelectRandomRecipe(unlockedRecipes);
 
-        //The selected recipe must not be locked.
+        //a recipe must have been selected
+        Assert.IsNotNull(selectedRecipe);
+
+        //the selected recipe must be unlocked
         Assert.Contains(selectedRecipe, unlockedRecipes);
+
+        //The selected recipe must not be locked.
+        Assert.IsFalse(lockedRecipes.Contains(selectedRecipe));
     }
     
     [Test]
