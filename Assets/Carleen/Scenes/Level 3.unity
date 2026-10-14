@@ -1376,19 +1376,19 @@ MonoBehaviour:
     steps:
     - stepType: 0
       isCompleted: 0
-      sceneOfStep: KatstudonEgg
+      sceneOfStep: KatsudonEgg
     - stepType: 1
       isCompleted: 0
-      sceneOfStep: KatstudonFrying
+      sceneOfStep: KatsudonFrying
     - stepType: 2
       isCompleted: 0
-      sceneOfStep: KatstudonBoiling1
+      sceneOfStep: KatsudonBoiling1
     - stepType: 2
       isCompleted: 0
-      sceneOfStep: KatstudonBoiling2
+      sceneOfStep: KatsudonBoiling2
     - stepType: 0
       isCompleted: 0
-      sceneOfStep: KatstudonCutting
+      sceneOfStep: KatsudonCutting
     - stepType: 3
       isCompleted: 0
       sceneOfStep: KatstudonPlating
