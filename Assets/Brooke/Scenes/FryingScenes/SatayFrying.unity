@@ -454,6 +454,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296029763}
     m_Modifications:
+    - target: {fileID: 335224841170718937, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Size.x
+      value: 12.490482
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Size.y
+      value: 2.7307563
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.033535957
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.056547344
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 12.251282
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: meatType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: rawSprite
+      value: 
+      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: statusText
+      value: 
+      objectReference: {fileID: 108994089}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: burntSprite
+      value: 
+      objectReference: {fileID: 2666840274455313301, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: warningIcon
+      value: 
+      objectReference: {fileID: 1983383416}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: cookedSprite
+      value: 
+      objectReference: {fileID: 1131308597015003697, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 1450291078}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: cookingSprite
+      value: 
+      objectReference: {fileID: -8127442606519142305, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: flameOnScript
+      value: 
+      objectReference: {fileID: 710948265}
     - target: {fileID: 264049506800259322, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_Name
       value: Chicken
@@ -467,8 +535,16 @@ PrefabInstance:
       value: 8.36455
       objectReference: {fileID: 0}
     - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9169178
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_Offset.x
-      value: -0.33424163
+      value: -0.33424187
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0017319024
       objectReference: {fileID: 0}
     - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -562,6 +638,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+--- !u!4 &345743412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7107775838139121516, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+  m_PrefabInstance: {fileID: 345743411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &446036408
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 296029763}
+    m_Modifications:
     - target: {fileID: 335224841170718937, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -630,24 +724,6 @@ PrefabInstance:
       propertyPath: flameOnScript
       value: 
       objectReference: {fileID: 710948265}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
---- !u!4 &345743412 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7107775838139121516, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
-  m_PrefabInstance: {fileID: 345743411}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &446036408
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 296029763}
-    m_Modifications:
     - target: {fileID: 264049506800259322, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_Name
       value: Chicken (1)
@@ -661,8 +737,16 @@ PrefabInstance:
       value: 7.8162527
       objectReference: {fileID: 0}
     - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+      propertyPath: m_Size.y
+      value: 2.073678
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_Offset.x
-      value: -0.389073
+      value: -0.3890729
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.08011198
       objectReference: {fileID: 0}
     - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -756,74 +840,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 335224841170718937, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Size.x
-      value: 12.490482
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Size.y
-      value: 2.7307563
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.033535957
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.056547344
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 12.251282
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: meatType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: rawSprite
-      value: 
-      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: statusText
-      value: 
-      objectReference: {fileID: 108994089}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: burntSprite
-      value: 
-      objectReference: {fileID: 2666840274455313301, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: warningIcon
-      value: 
-      objectReference: {fileID: 1983383416}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: cookedSprite
-      value: 
-      objectReference: {fileID: 1131308597015003697, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: warningPanel
-      value: 
-      objectReference: {fileID: 1450291078}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: cookingSprite
-      value: 
-      objectReference: {fileID: -8127442606519142305, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: flameOnScript
-      value: 
-      objectReference: {fileID: 710948265}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2361,6 +2377,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296029763}
     m_Modifications:
+    - target: {fileID: 335224841170718937, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Size.x
+      value: 12.177637
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Size.y
+      value: 2.6990778
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.10085583
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.024632096
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 12.251282
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: meatType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: rawSprite
+      value: 
+      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: statusText
+      value: 
+      objectReference: {fileID: 108994089}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: burntSprite
+      value: 
+      objectReference: {fileID: 2666840274455313301, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: warningIcon
+      value: 
+      objectReference: {fileID: 1983383416}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: cookedSprite
+      value: 
+      objectReference: {fileID: 1131308597015003697, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 1450291078}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: cookingSprite
+      value: 
+      objectReference: {fileID: -8127442606519142305, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: flameOnScript
+      value: 
+      objectReference: {fileID: 710948265}
     - target: {fileID: 264049506800259322, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_Name
       value: Chicken (2)
@@ -2374,8 +2458,16 @@ PrefabInstance:
       value: 8.035569
       objectReference: {fileID: 0}
     - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8385367
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_Offset.x
       value: -0.3342414
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.08011207
       objectReference: {fileID: 0}
     - target: {fileID: 3159315305879334949, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -2469,74 +2561,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 335224841170718937, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Size.x
-      value: 12.177637
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Size.y
-      value: 2.6990778
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.10085583
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.024632096
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 12.251282
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159315305879334949, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: meatType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: rawSprite
-      value: 
-      objectReference: {fileID: 7088523020075589765, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: statusText
-      value: 
-      objectReference: {fileID: 108994089}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: burntSprite
-      value: 
-      objectReference: {fileID: 2666840274455313301, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: warningIcon
-      value: 
-      objectReference: {fileID: 1983383416}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: cookedSprite
-      value: 
-      objectReference: {fileID: 1131308597015003697, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: warningPanel
-      value: 
-      objectReference: {fileID: 1450291078}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: cookingSprite
-      value: 
-      objectReference: {fileID: -8127442606519142305, guid: 0c1adc2898acc9643974aa7d395ba336, type: 3}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: flameOnScript
-      value: 
-      objectReference: {fileID: 710948265}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

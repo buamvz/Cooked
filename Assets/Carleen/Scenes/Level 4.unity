@@ -1789,16 +1789,16 @@ MonoBehaviour:
     steps:
     - stepType: 0
       isCompleted: 0
-      sceneOfStep: TeokbokkiCutting
+      sceneOfStep: TteokbokkiCutting
     - stepType: 2
       isCompleted: 0
-      sceneOfStep: TeokbokkiBoiling
+      sceneOfStep: TteokbokkiBoiling
     - stepType: 1
       isCompleted: 0
-      sceneOfStep: TeokbokkiFrying
+      sceneOfStep: TteokbokkiFrying
     - stepType: 3
       isCompleted: 0
-      sceneOfStep: TeokbokkiPlating
+      sceneOfStep: TteokbokkiPlating
     levelIsCompleted: 0
   levelCompleteScreen: {fileID: 1815414920}
   finalDish: {fileID: 1087558862}

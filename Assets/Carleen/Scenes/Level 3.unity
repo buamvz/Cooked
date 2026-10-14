@@ -1382,7 +1382,7 @@ MonoBehaviour:
       sceneOfStep: KatsudonFrying
     - stepType: 2
       isCompleted: 0
-      sceneOfStep: KatsudonBoiling1
+      sceneOfStep: KastudonBoiling1
     - stepType: 2
       isCompleted: 0
       sceneOfStep: KatsudonBoiling2
@@ -1391,7 +1391,7 @@ MonoBehaviour:
       sceneOfStep: KatsudonCutting
     - stepType: 3
       isCompleted: 0
-      sceneOfStep: KatstudonPlating
+      sceneOfStep: KatsudonPlating
     levelIsCompleted: 0
   levelCompleteScreen: {fileID: 452766015}
   finalDish: {fileID: 699660713}
