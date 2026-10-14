@@ -40,8 +40,29 @@ public class RewardSystem : MonoBehaviour
             starContainer.alpha = 1f;
         }
 
-        PlayerDataManager.Instance.playerProfile.addScore(starCount);
-        
+        // Try to find the current level number so we only add the difference if the player improved their score
+        int levelNumber = 0;
+        var levelManager = FindObjectOfType<LevelStepManager>();
+        if (levelManager != null && levelManager.currentLevel != null)
+        {
+            levelNumber = levelManager.currentLevel.levelNumber;
+        }
+
+        if (PlayerDataManager.Instance != null && PlayerDataManager.Instance.playerProfile != null)
+        {
+            var added = PlayerDataManager.Instance.playerProfile.UpdateBestStarsForLevel(levelNumber, starCount);
+            if (added > 0)
+            {
+                Debug.Log($"Added {added} star(s) to total score for level {levelNumber} (new best: {starCount})");
+                // Save updated profile asynchronously (fire-and-forget)
+                _ = PlayerDataManager.Instance.SavePlayerData();
+            }
+            else
+            {
+                Debug.Log($"No improvement for level {levelNumber} (best remains {PlayerDataManager.Instance.playerProfile.GetBestStarsForLevel(levelNumber)})");
+            }
+        }
+
         return starCount;
     }
 

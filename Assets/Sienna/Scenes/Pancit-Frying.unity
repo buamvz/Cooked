@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2801448113155347191, guid: 4346aa9d3766342f2a976aadcdb04d8d, type: 3}
+  m_Sprite: {fileID: 2801448113155347191, guid: cb7518488b2602043906b9f6767bc23a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -986,39 +986,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1880645746}
     m_Modifications:
-    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
-      propertyPath: statusText
-      value: 
-      objectReference: {fileID: 496166484}
-    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
-      propertyPath: warningIcon
-      value: 
-      objectReference: {fileID: 213162303}
-    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
-      propertyPath: warningPanel
-      value: 
-      objectReference: {fileID: 1117723211}
-    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
-      propertyPath: flameOnScript
-      value: 
-      objectReference: {fileID: 1076840765}
     - target: {fileID: 264049506800259322, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
       propertyPath: m_Name
       value: Pork
       objectReference: {fileID: 0}
-    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
       propertyPath: statusText
       value: 
       objectReference: {fileID: 496166484}
-    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
       propertyPath: warningIcon
       value: 
       objectReference: {fileID: 213162303}
-    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
       propertyPath: warningPanel
       value: 
       objectReference: {fileID: 1117723211}
-    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 81291638e98a5e14c82716faf3eaa49c, type: 3}
       propertyPath: flameOnScript
       value: 
       objectReference: {fileID: 1076840765}
@@ -1062,6 +1046,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+      propertyPath: statusText
+      value: 
+      objectReference: {fileID: 496166484}
+    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+      propertyPath: warningIcon
+      value: 
+      objectReference: {fileID: 213162303}
+    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 1117723211}
+    - target: {fileID: 4974839236523351679, guid: 218a1ecb5df40ca498cc580fe6bd2352, type: 3}
+      propertyPath: flameOnScript
+      value: 
+      objectReference: {fileID: 1076840765}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2801448113155347191, guid: 4346aa9d3766342f2a976aadcdb04d8d, type: 3}
+  m_Sprite: {fileID: 2801448113155347191, guid: cb7518488b2602043906b9f6767bc23a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1605,43 +1605,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1880645746}
     m_Modifications:
-    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
-      propertyPath: statusText
-      value: 
-      objectReference: {fileID: 2095866095}
-    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
-      propertyPath: warningIcon
-      value: 
-      objectReference: {fileID: 1246271577}
-    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
-      propertyPath: warningPanel
-      value: 
-      objectReference: {fileID: 1582518044}
-    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
-      propertyPath: flameOnScript
-      value: 
-      objectReference: {fileID: 1076840765}
     - target: {fileID: 264049506800259322, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: m_Name
       value: Chicken
       objectReference: {fileID: 0}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
-      propertyPath: meatType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: statusText
       value: 
       objectReference: {fileID: 2095866095}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: warningIcon
       value: 
       objectReference: {fileID: 1246271577}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: warningPanel
       value: 
       objectReference: {fileID: 1582518044}
-    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+    - target: {fileID: 4974839236523351679, guid: 517dde5c537a853409f5d70d011fd455, type: 3}
       propertyPath: flameOnScript
       value: 
       objectReference: {fileID: 1076840765}
@@ -1685,6 +1665,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: meatType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: statusText
+      value: 
+      objectReference: {fileID: 2095866095}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: warningIcon
+      value: 
+      objectReference: {fileID: 1246271577}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 1582518044}
+    - target: {fileID: 4974839236523351679, guid: fc47eba5ccaeb5e4bb826af33a67d39d, type: 3}
+      propertyPath: flameOnScript
+      value: 
+      objectReference: {fileID: 1076840765}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

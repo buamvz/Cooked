@@ -1691,7 +1691,7 @@ MonoBehaviour:
   - {fileID: 602236169}
   - {fileID: 854431011}
   - {fileID: 1728486646}
-  finalPlateSprite: {fileID: 6013442393091433443, guid: da28c26a429bf4c24b8ae9c4449d20b0, type: 3}
+  finalPlateSprite: {fileID: 6013442393091433443, guid: dc5e08611e8394a4b90cf5ae53c4b1ed, type: 3}
 --- !u!212 &1402316116
 SpriteRenderer:
   serializedVersion: 2
@@ -1739,9 +1739,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1749,7 +1749,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1402316117
 Transform:
