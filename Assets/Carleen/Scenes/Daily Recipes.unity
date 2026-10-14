@@ -253,6 +253,18 @@ MonoBehaviour:
     infoSceneName: KatsudonInteractiveMenu
     levelNumber: 3
     recipeImage: {fileID: 5101724940777697132, guid: 03c14795ccdddb54cb856a1f0ec8e71c, type: 3}
+  - recipeName: Tteokbokki
+    infoSceneName: TteokbokkiInteractiveMenu
+    levelNumber: 4
+    recipeImage: {fileID: 452794879358117628, guid: 03c14795ccdddb54cb856a1f0ec8e71c, type: 3}
+  - recipeName: Sinigang
+    infoSceneName: SinigangInteractiveMenu
+    levelNumber: 5
+    recipeImage: {fileID: -8436631307301026121, guid: 266ea29b2707d93468098974d9fa3e5c, type: 3}
+  - recipeName: Satay
+    infoSceneName: SatayInteractiveMenu
+    levelNumber: 6
+    recipeImage: {fileID: -3137775606029959713, guid: 03c14795ccdddb54cb856a1f0ec8e71c, type: 3}
 --- !u!1 &149816041
 GameObject:
   m_ObjectHideFlags: 0
