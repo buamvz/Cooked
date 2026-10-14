@@ -9,8 +9,10 @@ using UnityEngine.SceneManagement;
 public class LevelStepManager : MonoBehaviour
 {
     [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private ProgressBarController progressBar;
+
     // store and give values of level and its steps
-    
+
     public Level currentLevel;
 
     private string sceneToLoad;
@@ -25,16 +27,29 @@ public class LevelStepManager : MonoBehaviour
 
     private void Awake()
     {
-        // should ensure that level is still marked complete when rebooting game
-        if(PlayerDataManager.Instance.playerProfile.getCompletedLevels() > currentLevel.levelNumber)
+        // Ensure that level is still marked complete when rebooting game.
+        // Prefer PlayerPrefs unlocked level (persists across editor sessions) so we don't depend on
+        // PlayerDataManager load order. Fall back to playerProfile if needed.
+        var unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+        if (unlockedLevel > currentLevel.levelNumber)
         {
             currentLevel.levelIsCompleted = true;
+        }
+        else if (PlayerDataManager.Instance != null && PlayerDataManager.Instance.playerProfile != null)
+        {
+            // If profile reports completed levels, mark completed when completedLevels >= levelNumber
+            if (PlayerDataManager.Instance.playerProfile.getCompletedLevels() >= currentLevel.levelNumber)
+            {
+                currentLevel.levelIsCompleted = true;
+            }
         }
 
         finalDish.SetActive(false);
         levelCompleteScreen.SetActive(false);
         currentStepIndex = 0;
         StartStep(currentLevel.steps[currentStepIndex]);
+
+        progressBar.SetProgressValues(0f, currentLevel.steps.Count);
     }
 
 
@@ -62,13 +77,17 @@ public class LevelStepManager : MonoBehaviour
         Debug.Log($"Step {step.stepType} completed!");
         waitForNext = true;
 
+        progressBar.ProgressIncrease();
         sceneLoader.UnloadScene(sceneToLoad);
+
 
         yield return null;
     }
 
     private IEnumerator CompleteLevel()
     {
+        currentLevel.levelIsCompleted = true;
+
         Debug.Log("Level Complete!");
         levelCompleteScreen.SetActive(true);
         finalDish.SetActive(true);
@@ -130,24 +149,7 @@ public class LevelStepManager : MonoBehaviour
     // complete level panel
     public void ReturnToLevelMap()
     {
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
-
-        if (LevelMenu.currentLevel == unlockedLevel)
-        {
-            unlockedLevel++;
-
-            PlayerPrefs.SetInt("UnlockedLevel", unlockedLevel);
-            PlayerPrefs.Save();
-
-            Debug.Log("Unlocked level: " + unlockedLevel);
-        }
-
-        if (!currentLevel.levelIsCompleted)
-        {
-            PlayerDataManager.Instance.playerProfile.addCompletedLevel();
-            currentLevel.levelIsCompleted = true;
-        }
-
+        UpdateCompletedLevel();
         SceneManager.LoadScene("Level Map");
     }
     public void ReturnToMenu()
@@ -155,4 +157,27 @@ public class LevelStepManager : MonoBehaviour
         sceneLoader.LoadScene("MainMenu");
     }
 
+    private async void UpdateCompletedLevel()
+    {
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+
+        // Use the current level's explicit levelNumber to determine whether to unlock the next level.
+        // This avoids relying on LevelMenu.currentLevel which may not be set reliably when the scene is loaded.
+        var thisLevelNumber = (currentLevel != null) ? currentLevel.levelNumber : LevelMenu.currentLevel;
+
+        if (thisLevelNumber == unlockedLevel)
+        {
+            unlockedLevel++;
+            PlayerPrefs.SetInt("UnlockedLevel", unlockedLevel);
+            PlayerPrefs.Save();
+            Debug.Log("Unlocked level: " + unlockedLevel);
+        }
+
+        if (!currentLevel.levelIsCompleted)
+        {
+            PlayerDataManager.Instance.playerProfile.addCompletedLevel();
+            await PlayerDataManager.Instance.SavePlayerData();
+            currentLevel.levelIsCompleted = true;
+        }
+    }
 }

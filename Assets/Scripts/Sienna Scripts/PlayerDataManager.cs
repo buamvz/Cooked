@@ -6,6 +6,8 @@ using Unity.Services.CloudSave;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Linq;
 
 public class PlayerDataManager : MonoBehaviour
 {
@@ -25,6 +27,68 @@ public class PlayerDataManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // Reset player data but preserve player name and in-memory instance.
+    // Clears completed levels, total score and per-level bests, resets unlocked level PlayerPrefs,
+    // and attempts to update runtime UI and level state. Saves the cleared data.
+    public async Task ResetPlayerData()
+    {
+        if (playerProfile == null)
+        {
+            Debug.LogWarning("PlayerProfile is null; creating new profile to reset data.");
+            playerProfile = new PlayerProfile();
+        }
+
+        // preserve name
+        var preservedName = playerProfile.playerName;
+
+        playerProfile.playerName = preservedName;
+        playerProfile.setCompletedLevels(0);
+        // clear best stars and total score
+        playerProfile.ClearBestStars();
+        playerProfile.setTotalScore(0);
+
+        // reset unlocked level
+        PlayerPrefs.SetInt("UnlockedLevel", 1);
+        PlayerPrefs.Save();
+
+        // update any LevelStepManager instances so levels are not marked completed
+        var levelManagers = FindObjectsOfType<LevelStepManager>();
+        foreach (var lm in levelManagers)
+        {
+            if (lm != null && lm.currentLevel != null)
+            {
+                lm.currentLevel.levelIsCompleted = false;
+            }
+        }
+
+        // update profile UI
+        var profilePages = FindObjectsOfType<ProfilePageManager>();
+        foreach (var page in profilePages)
+        {
+            page.UpdateProfileInfo();
+        }
+
+        // update level menus (buttons) if present
+        var levelMenus = FindObjectsOfType<LevelMenu>();
+        var unlocked = PlayerPrefs.GetInt("UnlockedLevel", 1);
+        foreach (var menu in levelMenus)
+        {
+            if (menu != null && menu.buttons != null)
+            {
+                for (int i = 0; i < menu.buttons.Length; i++)
+                {
+                    menu.buttons[i].interactable = i < unlocked;
+                }
+            }
+        }
+
+        // save cleared data
+        await SavePlayerData();
+
+        Debug.Log("Player data reset (player name preserved).");
+    }
+
 
     // save data with unity cloud save 
     // updated to use player profile class
@@ -52,7 +116,8 @@ public class PlayerDataManager : MonoBehaviour
         {
             { "playerName", playerProfile.playerName },
             { "completedLevels", playerProfile.getCompletedLevels() },
-            { "totalScore", playerProfile.getTotalScore() }
+            { "totalScore", playerProfile.getTotalScore() },
+            { "bestStars", playerProfile.GetBestStarsForSave() }
         };
 
         try
@@ -74,7 +139,8 @@ public class PlayerDataManager : MonoBehaviour
             {
                 "playerName",
                 "completedLevels",
-                "totalScore"
+                "totalScore",
+                "bestStars"
             };
 
             var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
@@ -92,7 +158,24 @@ public class PlayerDataManager : MonoBehaviour
                 playerProfile.setCompletedLevels(completedLevels.Value.GetAs<int>());
                 Debug.Log($"Completed Levels: {completedLevels.Value.GetAs<string>()}");
             }
-            if (playerData.TryGetValue("totalScore", out var totalScore))
+            // bestStars, if present, should be used to reconstruct totalScore (keeps consistency)
+            bool bestStarsLoaded = false;
+            if (playerData.TryGetValue("bestStars", out var bestStars))
+            {
+                try
+                {
+                    var dict = bestStars.Value.GetAs<Dictionary<string, int>>();
+                    playerProfile.SetBestStarsFromSave(dict);
+                    bestStarsLoaded = true;
+                    Debug.Log($"Loaded best stars for {dict.Count} levels.");
+                }
+                catch (System.Exception)
+                {
+                    Debug.LogWarning("Failed to parse bestStars from save; falling back to totalScore if available.");
+                }
+            }
+
+            if (!bestStarsLoaded && playerData.TryGetValue("totalScore", out var totalScore))
             {
                 playerProfile.setTotalScore(totalScore.Value.GetAs<int>());
                 Debug.Log($"Total Score: {totalScore.Value.GetAs<string>()}");

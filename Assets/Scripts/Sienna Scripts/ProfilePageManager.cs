@@ -86,4 +86,10 @@ public class ProfilePageManager : MonoBehaviour
         }
     }
 
+    public async void ResetPlayerData()
+    {
+        PlayerDataManager.Instance.playerProfile.ClearBestStars();
+        await PlayerDataManager.Instance.ResetPlayerData();
+        UpdateProfileInfo();
+    }
 }
