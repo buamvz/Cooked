@@ -96,4 +96,37 @@ public class DailyRecipeSelectorTests
     }
 
 
+    [Test]
+    public void UpdatesSavedDateWhenNewDayIsRequested()
+    {
+        // Arrange: remove any saved daily recipe from earlier tests.
+        PlayerPrefs.DeleteKey("DailyRecipe");
+        PlayerPrefs.DeleteKey("DailyRecipeDate");
+
+        // Save a recipe from an earlier day.
+        PlayerPrefs.SetString("DailyRecipe", "Pancit");
+        PlayerPrefs.SetString("DailyRecipeDate", "2026-10-13");
+
+        List<string> unlockedRecipes = new List<string>
+        {
+            "Pancit",
+            "Butter Chicken",
+            "Katsudon"
+        };
+
+        // Use a fixed date so the test does not depend on the computer's clock.
+        string requestedDate = "2030-01-02";
+
+        // Act: request the daily recipe for the new date.
+        string selectedRecipe = DailyRecipeSelector.GetDailyRecipeForDate(unlockedRecipes, requestedDate);
+
+        // Assert: a valid recipe is returned and the requested date is saved.
+        Assert.IsNotNull(selectedRecipe);
+        Assert.Contains(selectedRecipe, unlockedRecipes);
+        Assert.AreEqual(requestedDate, PlayerPrefs.GetString("DailyRecipeDate"));
+
+        // Clean up saved values after the test.
+        PlayerPrefs.DeleteKey("DailyRecipe");
+        PlayerPrefs.DeleteKey("DailyRecipeDate");
+    }
 }
