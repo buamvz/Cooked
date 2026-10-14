@@ -15,6 +15,9 @@ public class DailyRecipeUI : MonoBehaviour
     // The button that returns the player to the Level Map.
     [SerializeField] private Button backToLevelMapButton;
 
+    // Displays the image for today's selected recipe.
+    [SerializeField] private Image dailyRecipeImage;
+
     // Recipe names and their corresponding Unity scene names.
     // Update these scene names to match your actual cooking scenes.
     [System.Serializable]
@@ -23,6 +26,7 @@ public class DailyRecipeUI : MonoBehaviour
         public string recipeName;
         public string infoSceneName;
         public int levelNumber = 1;
+        public Sprite recipeImage;
     }
 
     [SerializeField] private List<RecipeScene> recipes = new List<RecipeScene>();
@@ -64,10 +68,24 @@ public class DailyRecipeUI : MonoBehaviour
         // Choose today's recipe from the eligible recipes.
         selectedRecipe = DailyRecipeSelector.GetDailyRecipe(unlockedRecipes);
 
-        // Display the selected recipe, or a helpful message if none exist.
+        // Display the selected recipe's name.
         if (dailyRecipeName != null)
         {
             dailyRecipeName.text = selectedRecipe ?? "No recipes available";
+        }
+
+        // Find the selected recipe and display its matching food image.
+        if (dailyRecipeImage != null)
+        {
+            foreach (RecipeScene recipe in recipes)
+            {
+                if (recipe != null && recipe.recipeName == selectedRecipe)
+                {
+                    dailyRecipeImage.sprite = recipe.recipeImage;
+                    dailyRecipeImage.enabled = recipe.recipeImage != null;
+                    break;
+                }
+            }
         }
 
         // Connect the buttons to their actions.
