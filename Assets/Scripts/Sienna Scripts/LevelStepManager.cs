@@ -86,7 +86,7 @@ public class LevelStepManager : MonoBehaviour
 
     private IEnumerator CompleteLevel()
     {
-        currentLevel.levelIsCompleted = true;
+        // currentLevel.levelIsCompleted = true;
 
         Debug.Log("Level Complete!");
         levelCompleteScreen.SetActive(true);

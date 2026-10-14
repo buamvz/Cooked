@@ -1691,7 +1691,7 @@ MonoBehaviour:
   - {fileID: 602236169}
   - {fileID: 854431011}
   - {fileID: 1728486646}
-  finalPlateSprite: {fileID: 6013442393091433443, guid: dc5e08611e8394a4b90cf5ae53c4b1ed, type: 3}
+  finalPlateSprite: {fileID: 6013442393091433443, guid: da28c26a429bf4c24b8ae9c4449d20b0, type: 3}
 --- !u!212 &1402316116
 SpriteRenderer:
   serializedVersion: 2
