@@ -71,4 +71,38 @@ public class DailyRecipeSelector
         // Return the selected daily recipe.
         return selectedRecipe;
     }
+
+
+
+    // Selects a random recipe from all recipes that the player has unlocked.
+    public static string SelectRandomUnlockedRecipe(
+        List<string> allRecipes, List<string> unlockedRecipes)
+    {
+        // Return null if either list is missing or empty.
+        if (allRecipes == null || unlockedRecipes == null ||
+            allRecipes.Count == 0 || unlockedRecipes.Count == 0)
+        {
+            return null;
+        }
+
+        // Build a list containing only recipes that are both
+        // in the game and unlocked by the player.
+        List<string> eligibleRecipes = new List<string>();
+
+        foreach (string recipe in allRecipes)
+        {
+            // Only add a recipe if it is unlocked and not already
+            // included in the eligible list.
+            if (unlockedRecipes.Contains(recipe) &&
+                !eligibleRecipes.Contains(recipe))
+            {
+                eligibleRecipes.Add(recipe);
+            }
+        }
+
+        // Select randomly from the eligible recipes only.
+        return SelectRandomRecipe(eligibleRecipes);
+    }
+
+
 }

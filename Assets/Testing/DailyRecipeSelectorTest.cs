@@ -27,7 +27,7 @@ public class DailyRecipeSelectorTests
     [Test]
     public void SelectsOnlyUnlockedRecipes()
     {
-        //these are all recipes in the game.
+        // Arrange: create a list containing every recipe in the game.
         List<string> allRecipes = new List<string>
         {
             "Pancit",
@@ -35,31 +35,27 @@ public class DailyRecipeSelectorTests
             "Katsudon"
         };
 
-        //Only Pancit and Katsudon have been unlocked by the player
+        // Only Pancit and Katsudon have been unlocked by the player.
         List<string> unlockedRecipes = new List<string>
         {
             "Pancit",
             "Katsudon"
         };
 
-        // Identify the recipe that is locked.
-        List<string> lockedRecipes = new List<string>
-        {
-            "Butter Chicken"
-        };
+        // Act: ask the selector to choose from all recipes,
+        // while considering which recipes the player has unlocked.
+        string selectedRecipe = DailyRecipeSelector.SelectRandomUnlockedRecipe(allRecipes, unlockedRecipes);
 
-        //select a recipe using the unlocked recipes
-        string selectedRecipe = DailyRecipeSelector.SelectRandomRecipe(unlockedRecipes);
-
-        //a recipe must have been selected
+        // Assert: a recipe must have been selected.
         Assert.IsNotNull(selectedRecipe);
 
-        //the selected recipe must be unlocked
+        // The selected recipe must be one of the unlocked recipes.
         Assert.Contains(selectedRecipe, unlockedRecipes);
 
-        //The selected recipe must not be locked.
-        Assert.IsFalse(lockedRecipes.Contains(selectedRecipe));
+        // The locked recipe must never be selected.
+        Assert.AreNotEqual("Butter Chicken", selectedRecipe);
     }
+
     
     [Test]
     public void DailyRecipeRemainsTheSameWhenSceneIsReopened()
