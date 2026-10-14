@@ -21,7 +21,8 @@ public class DailyRecipeUI : MonoBehaviour
     public class RecipeScene
     {
         public string recipeName;
-        public string sceneName;
+        public string infoSceneName;
+        public int levelNumber = 1;
     }
 
     [SerializeField] private List<RecipeScene> recipes = new List<RecipeScene>();
@@ -41,12 +42,26 @@ public class DailyRecipeUI : MonoBehaviour
                 allRecipes.Add(recipe.recipeName);
             }
         }
+        
+        // Read the current unlocked level without changing it.
+        // Default to level 1 for a new player.
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
-        // TEMPORARY: treat every configured recipe as unlocked.
-        // We'll replace this with the game's actual unlock data next.
-        List<string> unlockedRecipes = new List<string>(allRecipes);
+        // Build a list containing only recipes from unlocked levels.
+        List<string> unlockedRecipes = new List<string>();
 
-        // Select today's recipe using the tested daily selector.
+        foreach (RecipeScene recipe in recipes)
+        {
+            // Only include recipes that have a name and are unlocked.
+            if (recipe != null &&
+                !string.IsNullOrEmpty(recipe.recipeName) &&
+                recipe.levelNumber <= unlockedLevel)
+            {
+                unlockedRecipes.Add(recipe.recipeName);
+            }
+        }
+
+        // Choose today's recipe from the eligible recipes.
         selectedRecipe = DailyRecipeSelector.GetDailyRecipe(unlockedRecipes);
 
         // Display the selected recipe, or a helpful message if none exist.
@@ -76,7 +91,7 @@ public class DailyRecipeUI : MonoBehaviour
             if (recipe != null && recipe.recipeName == selectedRecipe)
             {
                 // Load the configured cooking scene.
-                SceneManager.LoadScene(recipe.sceneName);
+                SceneManager.LoadScene(recipe.infoSceneName);
                 return;
             }
         }

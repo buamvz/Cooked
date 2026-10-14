@@ -242,11 +242,14 @@ MonoBehaviour:
   backToLevelMapButton: {fileID: 976633015}
   recipes:
   - recipeName: Pancit
-    sceneName: PancitInteractiveMenu
+    infoSceneName: PancitInteractiveMenu
+    levelNumber: 1
   - recipeName: Butter Chicken
-    sceneName: BCInteractiveMenu
+    infoSceneName: BCInteractiveMenu
+    levelNumber: 2
   - recipeName: Katsudon
-    sceneName: KatsudonInteractiveMenu
+    infoSceneName: KatsudonInteractiveMenu
+    levelNumber: 3
 --- !u!1 &149816041
 GameObject:
   m_ObjectHideFlags: 0
