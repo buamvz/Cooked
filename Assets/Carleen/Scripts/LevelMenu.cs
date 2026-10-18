@@ -28,4 +28,9 @@ public class LevelMenu : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void SetCurrentLevel(int level)
+    {
+        currentLevel = level;
+    }
 }
