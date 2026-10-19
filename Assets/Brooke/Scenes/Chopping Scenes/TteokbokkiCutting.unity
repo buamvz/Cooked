@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToolTipCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7202623422425894767, guid: c050f47b45bec7a4382cb0591bb594b7, type: 3}
+      propertyPath: ingredientExplanation
+      value: Grate up the cheese and place all of it into the bowl!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

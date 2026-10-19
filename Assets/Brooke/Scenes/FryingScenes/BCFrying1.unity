@@ -1007,7 +1007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -717, y: -256}
+  m_AnchoredPosition: {x: -716.99994, y: -256}
   m_SizeDelta: {x: -1521.419, y: -750.9973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &887626912
@@ -1799,7 +1799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -717, y: 98}
+  m_AnchoredPosition: {x: -716.99994, y: 98}
   m_SizeDelta: {x: -1521.419, y: -750.9973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732394132
@@ -2081,8 +2081,8 @@ PrefabInstance:
     - target: {fileID: 7202623422425894767, guid: c050f47b45bec7a4382cb0591bb594b7, type: 3}
       propertyPath: ingredientExplanation
       value: Turn the stove on and place the frying pan over the flame. Food needs
-        to be cooked correctly otherwise you could get sick, but don't let it burn.Then
-        place the raw meat in and let it cook.burn it! (Drag off the pan)
+        to be cooked correctly otherwise you could get sick. Then place the raw meat
+        in and let it cook, don't burn it! (Drag off the pan)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

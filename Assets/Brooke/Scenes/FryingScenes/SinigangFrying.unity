@@ -2368,8 +2368,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202623422425894767, guid: c050f47b45bec7a4382cb0591bb594b7, type: 3}
       propertyPath: ingredientExplanation
-      value: Turn on the pan to warm it and then place all ingredients into the pan
-        so they can mix together.
+      value: Drag the frying pan onto the stove and turn the dial on. Then place
+        all ingredients into the frying pan and allow it time to mix.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
