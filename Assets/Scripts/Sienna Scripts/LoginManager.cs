@@ -11,17 +11,31 @@ public class LoginManager : MonoBehaviour
 
     [SerializeField] private SceneLoader sceneLoader;
 
+    [Header("Debug Settings")]
+    [Tooltip("Change this string (e.g., Player1, Player2) to simulate different persistent people in the Editor.")]
+    [SerializeField] private string debugProfileName = "Player1";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
     {
+        InitializationOptions options = new InitializationOptions();
+
+#if UNITY_EDITOR
+        // If debugProfileName is "Player1", Unity will create/load a permanent file for Player1.
+        // If you change it to "Player2", it creates a separate file for Player2 without deleting Player1!
+        if (!string.IsNullOrEmpty(debugProfileName))
+        {
+            options.SetProfile(debugProfileName);
+            Debug.Log($"[Editor] Switched to isolated testing profile: {debugProfileName}");
+        }
+#endif
+
+
         if (UnityServices.State == ServicesInitializationState.Uninitialized)
         {
             try
             {
-                Debug.Log("Services Initializing");
-                await UnityServices.InitializeAsync();
-                Debug.Log("Services Initialized");
-
+                await UnityServices.InitializeAsync(options);
+                Debug.Log("Services Successfully Initialized");
             }
             catch (Exception ex)
             {
@@ -30,17 +44,22 @@ public class LoginManager : MonoBehaviour
             }
         }
 
-        if (AuthenticationService.Instance.SessionTokenExists)
+
+        if (PlayerAccountService.Instance.IsSignedIn)
         {
-            Debug.Log("Returning player");
+            Debug.Log("Returning Player Account detected.");
+            SignInOrLinkWithUnity();
+        }
+        else if (AuthenticationService.Instance.SessionTokenExists)
+        {
+            Debug.Log("Returning anonymous player found.");
+            await SignInAnonymouslyAsync();
         }
         else
         {
-            Debug.Log("New player");
+            Debug.Log("Completely clean boot. Signing in anonymously.");
+            await SignInAnonymouslyAsync();
         }
-
-        await SignInAnonymouslyAsync();
-
         // sceneLoader = FindAnyObjectByType<SceneLoader>();
     }
 
@@ -184,7 +203,7 @@ public class LoginManager : MonoBehaviour
         }
     }
 
-    public void SignOut()
+    public async void SignOut()
     {
         try
         {
@@ -210,16 +229,42 @@ public class LoginManager : MonoBehaviour
         {
             Debug.LogError($"Error during signout: {ex.Message}");
         }
+
+        await SignInAnonymouslyAsync();
     }
 
     // function for initializing/loading player profile data
     private async Task InitializePlayer()
     {
         Debug.Log("Loading player profile data...");
-
-        // load player data
         await PlayerDataManager.Instance.LoadPlayerData();
-        
+
+        try
+        {
+            string currentName = await AuthenticationService.Instance.GetPlayerNameAsync(false);
+
+            if (string.IsNullOrEmpty(currentName))
+            {
+                string desiredName = PlayerDataManager.Instance.playerProfile.playerName;
+
+                if (!string.IsNullOrEmpty(desiredName))
+                {
+                    await AuthenticationService.Instance.UpdatePlayerNameAsync(desiredName);
+                    Debug.Log($"Leaderboard name synchronized to: {desiredName}");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"Could not synchronize profile name to UGS: {ex.Message}");
+        }
+
+
+        //Debug.Log("Loading player profile data...");
+
+        //// load player data
+        //await PlayerDataManager.Instance.LoadPlayerData();
+
         Debug.Log("Player profile data loaded successfully.");
         PlayerSignedIn?.Invoke();
     }
