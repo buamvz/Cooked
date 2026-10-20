@@ -37,6 +37,7 @@ Contributions currently limited due to this being a university project.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
 Art assets are © Sienna + Brooke [CC BY-NC 4.0].
 
 ## Project status
