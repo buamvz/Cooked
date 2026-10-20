@@ -56,6 +56,7 @@ public class ProfilePageManager : MonoBehaviour
         usernameField.text = newUsername;
 
         await PlayerDataManager.Instance.SavePlayerData();
+        await AuthenticationService.Instance.UpdatePlayerNameAsync(newUsername);
 
         inputField.SetActive(false);
         isEditing = false;

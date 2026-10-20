@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Sienna/Scenes/MainMenu.unity
+    guid: 5cae6bb74893f4b449a2f85ed20306f9
+  - enabled: 1
     path: Assets/Brooke/Scenes/RecipeBook.unity
     guid: 4880b89c5ddb48144852343327ee9655
   - enabled: 1
@@ -68,6 +71,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sienna/Scenes/Pancit-Plating.unity
     guid: d25a6da24fc7c9540ac01a710be8325f
+  - enabled: 1
+    path: Assets/Sienna/Scenes/Leaderboard.unity
+    guid: c2bd4c5fbf6b15a4485bf0f0e3295257
   - enabled: 1
     path: Assets/Brooke/Scenes/Chopping Scenes/BCCutting.unity
     guid: 0b5de17cc9aa15a47ab53bcfd2091435
@@ -146,9 +152,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sienna/Scenes/LoginScene.unity
     guid: 03416fd78d5cbea4f81a9309c501ec5f
-  - enabled: 1
-    path: Assets/Sienna/Scenes/MainMenu.unity
-    guid: 5cae6bb74893f4b449a2f85ed20306f9
   - enabled: 1
     path: Assets/Sienna/Scenes/Controls.unity
     guid: 8b32f6cd79849874bb91176e6499506b

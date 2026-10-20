@@ -117,7 +117,8 @@ public class PlayerDataManager : MonoBehaviour
             { "playerName", playerProfile.playerName },
             { "completedLevels", playerProfile.getCompletedLevels() },
             { "totalScore", playerProfile.getTotalScore() },
-            { "bestStars", playerProfile.GetBestStarsForSave() }
+            { "bestStars", playerProfile.GetBestStarsForSave() },
+            { "avatarIndex", playerProfile.selectedAvatarIndex }
         };
 
         try
@@ -140,7 +141,8 @@ public class PlayerDataManager : MonoBehaviour
                 "playerName",
                 "completedLevels",
                 "totalScore",
-                "bestStars"
+                "bestStars",
+                "avatarIndex"
             };
 
             var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
@@ -151,6 +153,7 @@ public class PlayerDataManager : MonoBehaviour
             if (playerData.TryGetValue("playerName", out var name))
             {
                 playerProfile.playerName = name.Value.GetAs<string>();
+                await AuthenticationService.Instance.UpdatePlayerNameAsync(playerProfile.playerName);
                 Debug.Log($"Player Name: {name.Value.GetAs<string>()}");
             }
             if (playerData.TryGetValue("completedLevels", out var completedLevels))
@@ -179,6 +182,10 @@ public class PlayerDataManager : MonoBehaviour
             {
                 playerProfile.setTotalScore(totalScore.Value.GetAs<int>());
                 Debug.Log($"Total Score: {totalScore.Value.GetAs<string>()}");
+            }
+            if (playerData.TryGetValue("avatarIndex", out var avatar))
+            {
+                playerProfile.selectedAvatarIndex = avatar.Value.GetAs<int>();
             }
             Debug.Log($"Loaded player profile: {playerProfile.playerName}");
         }

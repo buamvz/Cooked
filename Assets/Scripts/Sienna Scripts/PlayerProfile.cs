@@ -5,8 +5,11 @@ using System.Collections.Generic;
 public class PlayerProfile
 {
     public string playerName;
+    public int selectedAvatarIndex;
+
     private int completedLevels;
     private int totalScore;
+
     private Dictionary<int, int> bestStarsPerLevel = new Dictionary<int, int>();
 
     public int getCompletedLevels()

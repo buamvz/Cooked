@@ -1,3 +1,4 @@
+using Unity.Plastic.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class LevelMenu : MonoBehaviour
     private void Awake()
     {
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+
+        if (unlockedLevel > buttons.Length) return;
 
         for (int i = 0; i < buttons.Length; i++)
         {

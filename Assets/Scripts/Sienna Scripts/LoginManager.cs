@@ -14,13 +14,31 @@ public class LoginManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
     {
-        if (!AuthenticationService.Instance.SessionTokenExists)
+        if (UnityServices.State == ServicesInitializationState.Uninitialized)
         {
-            Debug.Log("Session Token not found.");
-            return;
+            try
+            {
+                Debug.Log("Services Initializing");
+                await UnityServices.InitializeAsync();
+                Debug.Log("Services Initialized");
+
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Failed to initialize Unity Services: {ex}");
+                return;
+            }
         }
 
-        Debug.Log("Returning player siging in...");
+        if (AuthenticationService.Instance.SessionTokenExists)
+        {
+            Debug.Log("Returning player");
+        }
+        else
+        {
+            Debug.Log("New player");
+        }
+
         await SignInAnonymouslyAsync();
 
         // sceneLoader = FindAnyObjectByType<SceneLoader>();
@@ -28,21 +46,14 @@ public class LoginManager : MonoBehaviour
 
     private async void Awake()
     {
-        if (UnityServices.State == ServicesInitializationState.Uninitialized)
-        {
-            try
-            {
-                await UnityServices.InitializeAsync();
+        //if (Instance != null && Instance != this)
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
+        //Instance = this;
+        //DontDestroyOnLoad(gameObject);
 
-                Debug.Log("Services Initializing");
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"Failed to initialize Unity Services: {ex}");
-                return;
-            }
-            await UnityServices.InitializeAsync();
-        }
 
         PlayerAccountService.Instance.SignedIn += SignInOrLinkWithUnity;
     }

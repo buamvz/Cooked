@@ -3,6 +3,7 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     private SceneLoader sceneLoader;
+    [SerializeField] private Canvas loginCanvas;
 
     private void Start()
     {
@@ -20,6 +21,16 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Login and play.");
         sceneLoader.LoadScene("LoginScene");
+    }
+
+    public void OpenLoginPanel()
+    {
+        loginCanvas.gameObject.SetActive(true);
+    }
+
+    public void CloseLoginPanel()
+    {
+        loginCanvas.gameObject.SetActive(false);
     }
 
     public void ExitGame()
