@@ -1,6 +1,6 @@
 # COOKED
 
-**Cooked** 
+**a 2D Asian cooking game!** 
 <img src="docs/banner.png" alt="[COOKED] banner" width="100%">
 
 ## Description
