@@ -2737,7 +2737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: TeamScripts::LoginManager
   sceneLoader: {fileID: 2070337641}
-  debugProfileName: Player3
+  debugProfileName: 
 --- !u!4 &2070337640
 Transform:
   m_ObjectHideFlags: 0
