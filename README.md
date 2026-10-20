@@ -1,4 +1,4 @@
-# Project Name
+# COOKED
 
 **Cooked** 
 <img src="docs/banner.png" alt="[COOKED] banner" width="100%">
@@ -8,27 +8,25 @@
 **COOKED** is a 2D Android game made using Unity. You'll learn how to cook various Asian dishes, their origin and nutritional information.
 
 
-## Visuals
+## Gameplay
+<img src="docs/gameplay.gif" alt="Gameplay" width="720">
 
-<!-- Screenshots or GIFs -->
+
 
 ## Installation
 
-Steps to install or run the project.
-
-## Usage
-
-How to use it, with examples.
-
-## Support
+Download the build from the repository and enjoy!
 
 
-## Roadmap
+## Features
+- Step by step cooking gameplay for a range of Asian dishes (featuring 6 recipes!)
+- The origin and background of each dish
+- Nutritional info for every recipe for health & fitness freaks!
 
 
 ## Contributing
 
-Contributions currently limited.
+Contributions currently limited due to this being a university project.
 
 ## Authors and acknowledgment
 
