@@ -588,9 +588,9 @@ MonoBehaviour:
   - {fileID: 181397131}
   filledStar: {fileID: 5088316998373936774, guid: 567135dc8171d4c91b9ca05e785c3380, type: 3}
   emptyStar: {fileID: 6937817954938267909, guid: 39841ae784ab141a0840ddcb3f96a99a, type: 3}
-  threeStarTime: 40
-  twoStarTime: 50
-  oneStarTime: 60
+  threeStarTime: 60
+  twoStarTime: 70
+  oneStarTime: 80
 --- !u!114 &182947636
 MonoBehaviour:
   m_ObjectHideFlags: 0
